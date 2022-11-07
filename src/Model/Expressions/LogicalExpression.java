@@ -6,6 +6,7 @@ import Model.Types.BoolType;
 import Model.Values.IValue;
 import Model.Values.BoolValue;
 
+@SuppressWarnings("unused")
 public class LogicalExpression implements IExpression{
     IExpression exp1;
     IExpression exp2;

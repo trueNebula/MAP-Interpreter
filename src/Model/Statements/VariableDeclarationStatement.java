@@ -1,15 +1,14 @@
 package Model.Statements;
 
 import Model.Collections.Dictionary.IDictionary;
-import Model.Collections.Stack.IStack;
-import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
-import Model.Expressions.VariableExpression;
 import Model.Structures.ProgramState;
 import Model.Types.IType;
 import Model.Values.BoolValue;
 import Model.Values.IValue;
 import Model.Values.IntValue;
+
+@SuppressWarnings("unused")
 
 public class VariableDeclarationStatement implements IStatement{
     String variableName;
@@ -27,7 +26,7 @@ public class VariableDeclarationStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
+    public ProgramState execute(ProgramState state) throws StatementExecutionException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
 
         if(symTable.get(variableName) != null)

@@ -1,10 +1,9 @@
 package Model.Statements;
 
-import Model.Exceptions.ExpressionEvaluationException;
-import Model.Exceptions.StatementExecutionException;
 import Model.Expressions.IExpression;
 import Model.Structures.ProgramState;
 
+@SuppressWarnings("unused")
 public class IfStatement implements IStatement{
     IExpression expr;
     IStatement thenStatement;
@@ -23,7 +22,7 @@ public class IfStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
+    public ProgramState execute(ProgramState state) {
         return null;
 
     }

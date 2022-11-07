@@ -2,13 +2,12 @@ package Model.Statements;
 
 import Model.Collections.Dictionary.IDictionary;
 import Model.Collections.List.IList;
-import Model.Collections.Stack.IStack;
 import Model.Exceptions.ExpressionEvaluationException;
-import Model.Exceptions.StatementExecutionException;
 import Model.Expressions.IExpression;
 import Model.Structures.ProgramState;
 import Model.Values.IValue;
 
+@SuppressWarnings("unused")
 public class PrintStatement implements IStatement{
     IExpression expr;
 
@@ -23,7 +22,7 @@ public class PrintStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
+    public ProgramState execute(ProgramState state) throws ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IList<IValue> out = state.getOutputStream();
 

@@ -1,7 +1,6 @@
 package Model.Statements;
 
 import Model.Collections.Dictionary.IDictionary;
-import Model.Collections.Stack.IStack;
 import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Expressions.IExpression;
@@ -9,6 +8,7 @@ import Model.Structures.ProgramState;
 import Model.Types.IType;
 import Model.Values.IValue;
 
+@SuppressWarnings("unused")
 
 public class VariableAssignmentStatement implements IStatement{
     String id;

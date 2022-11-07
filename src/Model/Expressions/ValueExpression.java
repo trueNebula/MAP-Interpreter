@@ -1,9 +1,9 @@
 package Model.Expressions;
 
 import Model.Collections.Dictionary.IDictionary;
-import Model.Exceptions.ExpressionEvaluationException;
 import Model.Values.IValue;
 
+@SuppressWarnings("unused")
 public class ValueExpression implements IExpression{
     IValue e;
 
@@ -13,7 +13,7 @@ public class ValueExpression implements IExpression{
     }
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
+    public IValue evaluate(IDictionary<String, IValue> tbl) {
         return e;
 
     }

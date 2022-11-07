@@ -6,6 +6,7 @@ import Model.Types.IntType;
 import Model.Values.IValue;
 import Model.Values.IntValue;
 
+@SuppressWarnings("unused")
 public class ArithmeticExpression implements IExpression{
     IExpression exp1;
     IExpression exp2;

@@ -1,9 +1,9 @@
 package Model.Statements;
 
 import Model.Collections.Stack.IStack;
-import Model.Exceptions.StatementExecutionException;
 import Model.Structures.ProgramState;
 
+@SuppressWarnings("unused")
 public class CompoundStatement implements IStatement{
     IStatement first;
     IStatement second;
@@ -20,7 +20,7 @@ public class CompoundStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException {
+    public ProgramState execute(ProgramState state) {
         IStack<IStatement> exeStack = state.getExecutionStack();
 
         exeStack.push(second);
