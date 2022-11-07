@@ -7,6 +7,11 @@ import Model.Values.IValue;
 public class ValueExpression implements IExpression{
     IValue e;
 
+    public ValueExpression(IValue val){
+        e = val;
+
+    }
+
     @Override
     public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
         return e;

@@ -49,19 +49,19 @@ public class View {
 
                     catch(StatementExecutionException SEE) {
                         System.out.println("Caught StatementExecutionException:");
-                        System.out.println(SEE.getMessage());
+                        System.out.println(SEE.getMessage() + "\n");
 
                     }
 
                     catch(ExpressionEvaluationException EEE) {
                         System.out.println("Caught ExpressionEvaluationException:");
-                        System.out.println(EEE.getMessage());
+                        System.out.println(EEE.getMessage() + "\n");
 
                     }
 
                     catch(CollectionException CE) {
                         System.out.println("Caught CollectionException");
-                        System.out.println(CE.getMessage());
+                        System.out.println(CE.getMessage() + "\n");
 
                     }
 
@@ -77,19 +77,19 @@ public class View {
 
                     catch(StatementExecutionException SEE) {
                         System.out.println("Caught StatementExecutionException:");
-                        System.out.println(SEE.getMessage());
+                        System.out.println(SEE.getMessage() + "\n");
 
                     }
 
                     catch(ExpressionEvaluationException EEE) {
                         System.out.println("Caught ExpressionEvaluationException:");
-                        System.out.println(EEE.getMessage());
+                        System.out.println(EEE.getMessage() + "\n");
 
                     }
 
                     catch(CollectionException CE) {
                         System.out.println("Caught CollectionException");
-                        System.out.println(CE.getMessage());
+                        System.out.println(CE.getMessage() + "\n");
 
                     }
 
@@ -99,7 +99,7 @@ public class View {
                     return;
 
                 default:
-                    System.out.println("Invalid Command");
+                    System.out.println("Invalid Command\n");
                     break;
             }
 
@@ -113,7 +113,7 @@ public class View {
         System.out.println("1. View Current Program");
         System.out.println("2. Run Program");
         System.out.println("3. Run One Step at a time");
-        System.out.println("4. Exit");
+        System.out.println("4. Exit\n");
 
     }
 

@@ -30,7 +30,7 @@ public class VariableDeclarationStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
 
-        if(symTable.get(variableName) == null)
+        if(symTable.get(variableName) != null)
             throw new StatementExecutionException("Variable already declared");
 
         else{
