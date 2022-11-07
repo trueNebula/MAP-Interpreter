@@ -19,8 +19,9 @@ public class Controller {
 
     public ProgramState runOneStep(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
         IStack<IStatement> exeStack = state.getExecutionStack();
-        IDictionary<String, IValue> symTable = state.getSymbolTable();
 
+        if(exeStack.isEmpty())
+            throw new StatementExecutionException("ExecutionStack is empty");
 
         IStatement currentStatement = exeStack.pop();
         currentStatement.execute(state);

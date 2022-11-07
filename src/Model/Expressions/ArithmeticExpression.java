@@ -9,11 +9,11 @@ import Model.Values.IntValue;
 public class ArithmeticExpression implements IExpression{
     IExpression exp1;
     IExpression exp2;
-    int operator;
-    // 1 - addition
-    // 2 - subtraction
-    // 3 - multiplication
-    // 4 - division
+    char operator;
+    // + - addition
+    // - - subtraction
+    // * - multiplication
+    // / - division
 
     @Override
     public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
@@ -32,16 +32,16 @@ public class ArithmeticExpression implements IExpression{
                 n2 = i2.getValue();
 
                 switch(operator){
-                    case 1:
+                    case '+':
                         return new IntValue(n1 + n2);
 
-                    case 2:
+                    case '-':
                         return new IntValue(n1 - n2);
 
-                    case 3:
+                    case '*':
                         return new IntValue(n1 * n2);
 
-                    case 4:
+                    case '/':
                         if(n2 == 0)
                             throw new ExpressionEvaluationException("Division by zero");
 

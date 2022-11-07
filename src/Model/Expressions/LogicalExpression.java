@@ -9,9 +9,9 @@ import Model.Values.BoolValue;
 public class LogicalExpression implements IExpression{
     IExpression exp1;
     IExpression exp2;
-    int operator;
-    // 1 - and
-    // 2 - or
+    char operator;
+    // & - and
+    // | - or
 
     @Override
     public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
@@ -30,10 +30,10 @@ public class LogicalExpression implements IExpression{
                 b2 = i2.getValue();
 
                 switch(operator){
-                    case 1:
+                    case '&':
                         return new BoolValue(b1 && b2);
 
-                    case 2:
+                    case '|':
                         return new BoolValue(b1 || b2);
 
                 }

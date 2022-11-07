@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added View + fixed collection instantiation bug">
       <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/IStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/IfStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/NoStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/NoStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/PrintStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/VariableAssignmentStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/VariableDeclarationStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +66,7 @@
       <updated>1667476690859</updated>
       <workItem from="1667476692280" duration="13918000" />
       <workItem from="1667807107199" duration="1054000" />
-      <workItem from="1667808224826" duration="4884000" />
+      <workItem from="1667808224826" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -93,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667811541313</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added View + fixed collection instantiation bug">
+      <created>1667813223949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667813223949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="A2 init" />
     <MESSAGE value="Added README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README.md" />
+    <MESSAGE value="Added View + fixed collection instantiation bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added View + fixed collection instantiation bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
