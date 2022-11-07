@@ -22,7 +22,7 @@ public class Repository {
 
     public Repository(){
         // create mock program
-        IStatement original1 = new CompoundStatement(
+        IStatement original = new CompoundStatement(
                 new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
                         new VariableAssignmentStatement("v",
                                 new ValueExpression(
@@ -30,20 +30,25 @@ public class Repository {
                 new PrintStatement(new VariableExpression("v"))
                 ));
 
-        IStatement original2 =
+        IStatement ifTest =
                 new IfStatement(
                         new ValueExpression(new IntValue(0)),
                         new PrintStatement(new ValueExpression(new BoolValue(true))),
                         new PrintStatement(new ValueExpression(new BoolValue(false)))
                 );
 
+        IStatement printTest =
+                new CompoundStatement(
+                        new PrintStatement(new ValueExpression(new IntValue(1))),
+                        new PrintStatement(new ValueExpression(new IntValue(2)))
+                );
 
         // create Structures
         IStack<IStatement> exeStack = new GenericStack<>();
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
 
-        repo.add(new ProgramState(exeStack, symTable, out, original2));
+        repo.add(new ProgramState(exeStack, symTable, out, printTest));
 
     }
 

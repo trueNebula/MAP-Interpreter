@@ -8,5 +8,7 @@ public interface IList<T> {
     void remove(int index);
     void remove(T value);
     int size();
+    void clear();
+    boolean isEmpty();
 
 }

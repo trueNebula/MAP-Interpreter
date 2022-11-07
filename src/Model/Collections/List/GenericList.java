@@ -60,6 +60,18 @@ public class GenericList<T> implements IList<T>, Iterable<T>{
 
     }
 
+    @Override
+    public void clear(){
+        elems.clear();
+
+    }
+
+    @Override
+    public boolean isEmpty(){
+        return elems.isEmpty();
+
+    }
+
 }
 
 class ListIterator<T> implements Iterator<T>{
@@ -74,7 +86,7 @@ class ListIterator<T> implements Iterator<T>{
 
     @Override
     public boolean hasNext() {
-        return currentIndex + 1 < listReference.size();
+        return currentIndex + 1 <= listReference.size();
     }
 
     @Override
@@ -84,7 +96,7 @@ class ListIterator<T> implements Iterator<T>{
 
         else throw new NoSuchElementException();
 
-        return listReference.get(currentIndex);
+        return listReference.get(currentIndex - 1);
 
     }
 

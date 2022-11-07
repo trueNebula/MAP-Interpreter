@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Fixed a bunch of warnings">
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added IfStatement and a test program">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/IfStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/VariableAssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/List/IList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors"
+    "settings.editor.selected.configurable": "preferences.intentionPowerPack"
   }
 }]]></component>
   <component name="RunManager">
@@ -69,7 +71,7 @@
       <updated>1667476690859</updated>
       <workItem from="1667476692280" duration="13918000" />
       <workItem from="1667807107199" duration="1054000" />
-      <workItem from="1667808224826" duration="8900000" />
+      <workItem from="1667808224826" duration="11319000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667815357930</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added IfStatement and a test program">
+      <created>1667824915263</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667824915263</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +173,19 @@
     <MESSAGE value="Changed ArithExp and LogicExp operator to use char" />
     <MESSAGE value="Added a simple program to run" />
     <MESSAGE value="Fixed a bunch of warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bunch of warnings" />
+    <MESSAGE value="Added IfStatement and a test program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added IfStatement and a test program" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/View/View.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

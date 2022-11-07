@@ -1,8 +1,10 @@
 package View;
 import Controller.Controller;
+import Model.Collections.List.GenericList;
 import Model.Exceptions.CollectionException;
 import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
+import Model.Values.IValue;
 
 import java.util.Scanner;
 
@@ -42,26 +44,35 @@ public class View {
                 case 2:
                     System.out.println("Running Program...");
 
-                    try {
-                        controller.runAllSteps();
+                    while(!controller.getCurrentProgramState().getExecutionStack().isEmpty()) {
 
-                    }
+                        try {
+                            controller.runAllSteps();
+                            GenericList<IValue> out = (GenericList<IValue>) controller.getCurrentProgramState().getOutputStream();
 
-                    catch(StatementExecutionException SEE) {
-                        System.out.println("Caught StatementExecutionException:");
-                        System.out.println(SEE.getMessage() + "\n");
+                            for(IValue i : out){
+                                System.out.println(i.toString());
 
-                    }
+                            }
 
-                    catch(ExpressionEvaluationException EEE) {
-                        System.out.println("Caught ExpressionEvaluationException:");
-                        System.out.println(EEE.getMessage() + "\n");
+                            out.clear();
 
-                    }
+                        } catch (StatementExecutionException SEE) {
+                            System.out.println("Caught StatementExecutionException:");
+                            System.out.println(SEE.getMessage() + "\n");
+                            break;
 
-                    catch(CollectionException CE) {
-                        System.out.println("Caught CollectionException");
-                        System.out.println(CE.getMessage() + "\n");
+                        } catch (ExpressionEvaluationException EEE) {
+                            System.out.println("Caught ExpressionEvaluationException:");
+                            System.out.println(EEE.getMessage() + "\n");
+                            break;
+
+                        } catch (CollectionException CE) {
+                            System.out.println("Caught CollectionException");
+                            System.out.println(CE.getMessage() + "\n");
+                            break;
+
+                        }
 
                     }
 

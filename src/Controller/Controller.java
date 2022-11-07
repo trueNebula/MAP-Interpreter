@@ -1,12 +1,10 @@
 package Controller;
-import Model.Collections.Dictionary.IDictionary;
 import Model.Collections.Stack.IStack;
 import Model.Exceptions.CollectionException;
 import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Statements.IStatement;
 import Model.Structures.ProgramState;
-import Model.Values.IValue;
 import Repo.Repository;
 
 public class Controller {
@@ -36,6 +34,9 @@ public class Controller {
         while(!progState.getExecutionStack().isEmpty()){
             runOneStep(progState);
             // maybe display some stuff
+
+            if(!progState.getOutputStream().isEmpty())
+                return;
 
         }
 
