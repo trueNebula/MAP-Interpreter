@@ -38,6 +38,31 @@ public class View {
             }
 
             switch(cmd){
+                case 0:
+                    // Select Program
+                    System.out.println("Available programs:");
+                    System.out.println("1. bigBoy");
+                    System.out.println(controller.getRepository().bigBoy.toString());
+                    System.out.println("2. printTest");
+                    System.out.println(controller.getRepository().printTest.toString());
+                    System.out.println("3. ifTest");
+                    System.out.println(controller.getRepository().ifTest.toString());
+                    cmdstring = keyboard.nextLine();
+
+                    try{
+                        cmd = Integer.parseInt(cmdstring);
+
+                    }
+
+                    catch (NumberFormatException nfe){
+                        cmd = 1;
+
+                    }
+
+                    controller.changeProgram(cmd);
+
+                    break;
+
                 case 1:
                     System.out.println("Current Program:");
                     System.out.println(controller.getCurrentProgramState().getExecutionStack().peek());
@@ -139,6 +164,7 @@ public class View {
 
     void printMenu(){
         System.out.println("BogoScript Language Interpreter");
+        System.out.println("0. Change Program");
         System.out.println("1. View Current Program");
         System.out.println("2. Run Program");
         System.out.println("3. Run One Step at a time");

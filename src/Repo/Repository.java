@@ -20,9 +20,11 @@ import java.util.List;
 public class Repository {
     List<ProgramState> repo = new ArrayList<>();
 
+    public IStatement bigBoy, ifTest, printTest;
+
     public Repository(){
         // create mock program
-        IStatement original = new CompoundStatement(
+        bigBoy = new CompoundStatement(
                 new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
                         new VariableAssignmentStatement("v",
                                 new ValueExpression(
@@ -30,14 +32,14 @@ public class Repository {
                 new PrintStatement(new VariableExpression("v"))
                 ));
 
-        IStatement ifTest =
+        ifTest =
                 new IfStatement(
                         new ValueExpression(new IntValue(0)),
                         new PrintStatement(new ValueExpression(new BoolValue(true))),
                         new PrintStatement(new ValueExpression(new BoolValue(false)))
                 );
 
-        IStatement printTest =
+        printTest =
                 new CompoundStatement(
                         new PrintStatement(new ValueExpression(new IntValue(1))),
                         new PrintStatement(new ValueExpression(new IntValue(2)))
@@ -48,12 +50,35 @@ public class Repository {
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
 
-        repo.add(new ProgramState(exeStack, symTable, out, original));
+        repo.add(new ProgramState(exeStack, symTable, out, bigBoy));
 
     }
 
     public ProgramState getCurrentProgramState(){
         return repo.get(0);
+
+    }
+
+    public void changeProgram(int i){
+
+        switch (i) {
+            case 1 -> {
+                repo.get(0).getExecutionStack().pop();
+                repo.get(0).getExecutionStack().push(bigBoy);
+                repo.get(0).setOriginalProgram(bigBoy);
+            }
+            case 2 -> {
+                repo.get(0).getExecutionStack().pop();
+                repo.get(0).getExecutionStack().push(printTest);
+                repo.get(0).setOriginalProgram(printTest);
+            }
+            case 3 -> {
+                repo.get(0).getExecutionStack().pop();
+                repo.get(0).getExecutionStack().push(ifTest);
+                repo.get(0).setOriginalProgram(ifTest);
+            }
+
+        }
 
     }
 

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added output to runAllSteps">
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added current program cmd in view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/IStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Stack/IStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Expressions/ArithmeticExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Expressions/LogicalExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Expressions/ValueExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Expressions/VariableExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Statements/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statements/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
@@ -75,7 +69,7 @@
       <updated>1667476690859</updated>
       <workItem from="1667476692280" duration="13918000" />
       <workItem from="1667807107199" duration="1054000" />
-      <workItem from="1667808224826" duration="12023000" />
+      <workItem from="1667808224826" duration="14719000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -133,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667827142484</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added output to runOneStep">
+      <created>1667827888729</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667827888729</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added current program cmd in view">
+      <created>1667828076175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667828076175</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,15 +194,17 @@
     <MESSAGE value="Fixed a bunch of warnings" />
     <MESSAGE value="Added IfStatement and a test program" />
     <MESSAGE value="Added output to runAllSteps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added output to runAllSteps" />
+    <MESSAGE value="Added output to runOneStep" />
+    <MESSAGE value="Added current program cmd in view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added current program cmd in view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/View/View.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="3" />
+          <line>61</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
