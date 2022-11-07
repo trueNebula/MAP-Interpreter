@@ -15,7 +15,7 @@ public class CompoundStatement implements IStatement{
     }
 
     public String toString(){
-        return "(" + first.toString() + "; " + second.toString() + ")";
+        return "(" + first.toString() + " " + second.toString() + ")";
 
     }
 

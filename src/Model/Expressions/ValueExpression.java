@@ -13,6 +13,11 @@ public class ValueExpression implements IExpression{
     }
 
     @Override
+    public String toString() {
+        return e.toString();
+    }
+
+    @Override
     public IValue evaluate(IDictionary<String, IValue> tbl) {
         return e;
 

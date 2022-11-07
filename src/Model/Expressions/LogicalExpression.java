@@ -52,5 +52,11 @@ public class LogicalExpression implements IExpression{
         return new BoolValue(false);
 
     }
-    
+
+    @Override
+    public String toString() {
+        return exp1.toString() + " " + operator + operator + "" + exp2;
+    }
+
+
 }

@@ -27,4 +27,10 @@ public class GenericStack<T> implements IStack<T>{
 
     }
 
+    @Override
+    public T peek(){
+        return elems.peek();
+
+    }
+
 }

@@ -48,7 +48,7 @@ public class Repository {
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
 
-        repo.add(new ProgramState(exeStack, symTable, out, printTest));
+        repo.add(new ProgramState(exeStack, symTable, out, original));
 
     }
 
