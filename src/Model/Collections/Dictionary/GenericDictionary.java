@@ -1,10 +1,14 @@
 package Model.Collections.Dictionary;
 
-import java.util.Dictionary;
-import java.util.Map;
+import java.util.HashMap;
 
 public class GenericDictionary<T, K> implements IDictionary<T, K> {
-    Map<T, K> elems;
+    HashMap<T, K> elems;
+
+    public GenericDictionary(){
+        elems = new HashMap<>();
+
+    }
 
     @Override
     public void put(T key, K value) {

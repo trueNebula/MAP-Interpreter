@@ -23,20 +23,11 @@ public class PrintStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException {
-        IStack<IStatement> exeStack = state.getExecutionStack();
+    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IList<IValue> out = state.getOutputStream();
 
-        try {
-            out.add(expr.evaluate(symTable));
-
-        }
-
-        catch(ExpressionEvaluationException EEException){
-            throw new StatementExecutionException(EEException.getMessage());
-
-        }
+        out.add(expr.evaluate(symTable));
 
         return state;
 

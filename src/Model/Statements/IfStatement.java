@@ -1,5 +1,6 @@
 package Model.Statements;
 
+import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Expressions.IExpression;
 import Model.Structures.ProgramState;
@@ -22,7 +23,7 @@ public class IfStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException {
+    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         return null;
 
     }

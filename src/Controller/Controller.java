@@ -1,6 +1,8 @@
 package Controller;
 import Model.Collections.Dictionary.IDictionary;
 import Model.Collections.Stack.IStack;
+import Model.Exceptions.CollectionException;
+import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Statements.IStatement;
 import Model.Structures.ProgramState;
@@ -15,28 +17,19 @@ public class Controller {
 
     }
 
-    public ProgramState runOneStep(ProgramState state) throws StatementExecutionException {
+    public ProgramState runOneStep(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
         IStack<IStatement> exeStack = state.getExecutionStack();
         IDictionary<String, IValue> symTable = state.getSymbolTable();
 
 
         IStatement currentStatement = exeStack.pop();
-
-        try {
-            currentStatement.execute(state);
-
-        }
-
-        catch (StatementExecutionException SEE) {
-            throw SEE;
-
-        }
+        currentStatement.execute(state);
 
         return state;
 
     }
 
-    void runAllSteps() throws StatementExecutionException{
+    public void runAllSteps() throws StatementExecutionException, ExpressionEvaluationException, CollectionException{
         ProgramState progState = repository.getCurrentProgramState();
 
         while(!progState.getExecutionStack().isEmpty()){
@@ -44,6 +37,11 @@ public class Controller {
             // maybe display some stuff
 
         }
+
+    }
+
+    public ProgramState getCurrentProgramState(){
+        return repository.getCurrentProgramState();
 
     }
 

@@ -27,31 +27,21 @@ public class VariableAssignmentStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException {
-        IStack<IStatement> exeStack = state.getExecutionStack();
+    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
 
-        if(symTable.get(id) != null){
-            try {
-                IValue value = expr.evaluate(symTable);
-                IType type = (symTable.get(id)).getType();
+        if(symTable.get(id) != null) {
+            IValue value = expr.evaluate(symTable);
+            IType type = (symTable.get(id)).getType();
 
-                if(value.getType().equals(type)){
-                    symTable.put(id, value);
+            if (value.getType().equals(type)) {
+                symTable.put(id, value);
 
-                }
-
-                else{
-                    throw new StatementExecutionException("Declared type of variable " + id + " and type of assigned expression do not match");
-
-                }
+            } else {
+                throw new StatementExecutionException("Declared type of variable " + id + " and type of assigned expression do not match");
 
             }
 
-            catch(ExpressionEvaluationException EEException){
-                throw new StatementExecutionException(EEException.getMessage());
-
-            }
 
         }
 

@@ -2,6 +2,7 @@ package Model.Statements;
 
 import Model.Collections.Dictionary.IDictionary;
 import Model.Collections.Stack.IStack;
+import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Expressions.VariableExpression;
 import Model.Structures.ProgramState;
@@ -26,8 +27,7 @@ public class VariableDeclarationStatement implements IStatement{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementExecutionException {
-        IStack<IStatement> exeStack = state.getExecutionStack();
+    public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
 
         if(symTable.get(variableName) == null)

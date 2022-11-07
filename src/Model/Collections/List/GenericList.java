@@ -1,11 +1,16 @@
 package Model.Collections.List;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class GenericList<T> implements IList<T>, Iterable<T>{
-    List<T> elems;
+    ArrayList<T> elems;
+
+    public GenericList(){
+        elems = new ArrayList<>();
+
+    }
 
     @Override
     public T get(int index){

@@ -4,6 +4,11 @@ import java.util.Stack;
 public class GenericStack<T> implements IStack<T>{
     Stack<T> elems;
 
+    public GenericStack(){
+        elems = new Stack<>();
+
+    }
+
     @Override
     public T pop(){
         return elems.pop();
