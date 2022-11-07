@@ -10,6 +10,7 @@ import Model.Expressions.VariableExpression;
 import Model.Statements.*;
 import Model.Structures.ProgramState;
 import Model.Types.IntType;
+import Model.Values.BoolValue;
 import Model.Values.IValue;
 import Model.Values.IntValue;
 
@@ -21,7 +22,7 @@ public class Repository {
 
     public Repository(){
         // create mock program
-        IStatement original = new CompoundStatement(
+        IStatement original1 = new CompoundStatement(
                 new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
                         new VariableAssignmentStatement("v",
                                 new ValueExpression(
@@ -29,13 +30,20 @@ public class Repository {
                 new PrintStatement(new VariableExpression("v"))
                 ));
 
+        IStatement original2 =
+                new IfStatement(
+                        new ValueExpression(new IntValue(0)),
+                        new PrintStatement(new ValueExpression(new BoolValue(true))),
+                        new PrintStatement(new ValueExpression(new BoolValue(false)))
+                );
+
 
         // create Structures
         IStack<IStatement> exeStack = new GenericStack<>();
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
 
-        repo.add(new ProgramState(exeStack, symTable, out, original));
+        repo.add(new ProgramState(exeStack, symTable, out, original2));
 
     }
 

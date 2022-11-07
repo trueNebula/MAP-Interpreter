@@ -8,7 +8,6 @@ import Model.Structures.ProgramState;
 import Model.Types.IType;
 import Model.Values.IValue;
 
-@SuppressWarnings("unused")
 
 public class VariableAssignmentStatement implements IStatement{
     String id;
