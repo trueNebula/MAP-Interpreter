@@ -40,6 +40,8 @@ public class View {
             switch(cmd){
                 case 1:
                     System.out.println("Current Program:");
+                    System.out.println(controller.getCurrentProgramState().getExecutionStack().peek());
+
                     break;
 
                 case 2:
