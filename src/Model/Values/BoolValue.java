@@ -17,7 +17,7 @@ public class BoolValue implements IValue{
     }
 
     public String toString(){
-        return Boolean.toString(value);
+        return ""+value;
 
     }
 

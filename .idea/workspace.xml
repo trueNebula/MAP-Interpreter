@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added current program cmd in view">
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added the worst possible program switching tech">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repo/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,7 @@
       <updated>1667476690859</updated>
       <workItem from="1667476692280" duration="13918000" />
       <workItem from="1667807107199" duration="1054000" />
-      <workItem from="1667808224826" duration="14719000" />
+      <workItem from="1667808224826" duration="16799000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667828076175</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added the worst possible program switching tech">
+      <created>1667839415944</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667839415944</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,18 +202,8 @@
     <MESSAGE value="Added output to runAllSteps" />
     <MESSAGE value="Added output to runOneStep" />
     <MESSAGE value="Added current program cmd in view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added current program cmd in view" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/View/View.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added the worst possible program switching tech" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the worst possible program switching tech" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

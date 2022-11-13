@@ -75,6 +75,7 @@ public class View {
                     while(!controller.getCurrentProgramState().getExecutionStack().isEmpty()) {
 
                         try {
+                            // TODO: not this
                             controller.runAllSteps();
                             GenericList<IValue> out = (GenericList<IValue>) controller.getCurrentProgramState().getOutputStream();
 
@@ -110,6 +111,7 @@ public class View {
                     System.out.println("Running Steps...");
 
                     try {
+                        // TODO: still not this
                         if (!controller.getCurrentProgramState().getExecutionStack().isEmpty()) {
                             IStatement currentStatement = controller.getCurrentProgramState().getExecutionStack().peek();
                             controller.runOneStep(controller.getCurrentProgramState());
