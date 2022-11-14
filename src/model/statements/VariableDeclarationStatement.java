@@ -4,9 +4,7 @@ import model.collections.dictionary.IDictionary;
 import model.exceptions.StatementExecutionException;
 import model.structures.ProgramState;
 import model.types.IType;
-import model.values.BoolValue;
 import model.values.IValue;
-import model.values.IntValue;
 
 @SuppressWarnings("unused")
 
@@ -33,14 +31,7 @@ public class VariableDeclarationStatement implements IStatement{
             throw new StatementExecutionException("Variable already declared");
 
         else{
-            IValue variable;
-            if(variableType.toString().equals("int"))
-                variable = new IntValue(0);
-
-            else
-                variable = new BoolValue(false);
-
-
+            IValue variable = variableType.defaultValue();
             symTable.put(variableName, variable);
 
         }

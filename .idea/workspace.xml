@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="lowercase package names">
-      <change afterPath="$PROJECT_DIR$/src/model/types/StringType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/values/StringValue.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="added display flag to Controller.runOneStep()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/types/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/types/IType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/IType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/types/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/types/StringType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/StringType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <workItem from="1667807107199" duration="1054000" />
       <workItem from="1667808224826" duration="16799000" />
       <workItem from="1668345925287" duration="711000" />
-      <workItem from="1668403421822" duration="3900000" />
+      <workItem from="1668403421822" duration="4432000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -166,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668406957057</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added StringType, StringValue, fileTable">
+      <created>1668412812115</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668412812115</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added display flag to Controller.runOneStep()">
+      <created>1668412982747</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668412982747</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +239,9 @@
     <MESSAGE value="Added the worst possible program switching tech" />
     <MESSAGE value="Revamped view printing + added toString() overrides to collections" />
     <MESSAGE value="lowercase package names" />
-    <option name="LAST_COMMIT_MESSAGE" value="lowercase package names" />
+    <MESSAGE value="added StringType, StringValue, fileTable" />
+    <MESSAGE value="added display flag to Controller.runOneStep()" />
+    <option name="LAST_COMMIT_MESSAGE" value="added display flag to Controller.runOneStep()" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
