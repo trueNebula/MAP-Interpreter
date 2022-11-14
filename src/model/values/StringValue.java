@@ -19,7 +19,7 @@ public class StringValue implements IValue{
     }
 
     public String toString(){
-        return value;
+        return '"' + value + '"';
 
     }
 

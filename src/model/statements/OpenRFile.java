@@ -29,6 +29,7 @@ public class OpenRFile implements IStatement{
 
     }
 
+    @SuppressWarnings("DuplicatedCode")
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();

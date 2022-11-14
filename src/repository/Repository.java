@@ -55,10 +55,28 @@ public class Repository {
                         new CompoundStatement(
                                 new VariableAssignmentStatement("file",
                                         new ValueExpression(
-                                                new StringValue("log.txt"))),
+                                                new StringValue("test.in"))),
                                 new CompoundStatement(
                                         new OpenRFile(new VariableExpression("file")),
-                                        new CloseRFile(new VariableExpression("file"))
+                                        new CompoundStatement(
+                                                new VariableDeclarationStatement("var", new IntType()),
+                                                new CompoundStatement(
+                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
+                                                        new CompoundStatement(
+                                                                new PrintStatement(new VariableExpression("var")),
+                                                                new CompoundStatement(
+                                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new VariableExpression("var")),
+                                                                                new CloseRFile(new VariableExpression("file"))
+                                                                        )
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
                                 )
                         )
                 );

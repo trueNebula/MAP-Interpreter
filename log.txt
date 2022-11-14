@@ -3,8 +3,13 @@ LOG START
 
 ExeStack:
 string file; 
-file = log.txt
+file = "test.in"
 openRFile(file);
+int var; 
+readFile(file, var);
+print(var); 
+readFile(file, var);
+print(var); 
 closeRFile(file);
 
 Symbol Table:
@@ -37,12 +42,17 @@ LOG END
 LOG START
 
 ExeStack:
-file = log.txt
+file = "test.in"
 openRFile(file);
+int var; 
+readFile(file, var);
+print(var); 
+readFile(file, var);
+print(var); 
 closeRFile(file);
 
 Symbol Table:
-file --> null
+file --> "null"
 
 Output Stream:
 
@@ -56,28 +66,10 @@ LOG END
 LOG START
 
 ExeStack:
-file = log.txt
+file = "test.in"
 
 Symbol Table:
-file --> null
-
-Output Stream:
-
-File Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ExeStack:
-openRFile(file);
-closeRFile(file);
-
-Symbol Table:
-file --> log.txt
+file --> "null"
 
 Output Stream:
 
@@ -92,13 +84,240 @@ LOG START
 
 ExeStack:
 openRFile(file);
+int var; 
+readFile(file, var);
+print(var); 
+readFile(file, var);
+print(var); 
+closeRFile(file);
 
 Symbol Table:
-file --> log.txt
+file --> "test.in"
 
 Output Stream:
 
 File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+openRFile(file);
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int var; 
+readFile(file, var);
+print(var); 
+readFile(file, var);
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int var; 
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, var);
+print(var); 
+readFile(file, var);
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 0
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, var);
+
+Symbol Table:
+file --> "test.in"
+var --> 0
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+readFile(file, var);
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, var);
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+1
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, var);
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 2
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+
+Symbol Table:
+file --> "test.in"
+var --> 2
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
 
 LOG END
 ---------------
@@ -111,12 +330,14 @@ ExeStack:
 closeRFile(file);
 
 Symbol Table:
-file --> log.txt
+file --> "test.in"
+var --> 2
 
 Output Stream:
+2
 
 File Table:
-log.txt --> java.io.BufferedReader@41cf53f9
+"test.in" --> java.io.BufferedReader@5a10411
 
 LOG END
 ---------------
@@ -128,7 +349,370 @@ LOG START
 ExeStack:
 
 Symbol Table:
-file --> log.txt
+file --> "test.in"
+var --> 2
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+string file; 
+file = "test.in"
+openRFile(file);
+int var; 
+readFile(file, "var");
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+string file; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+file = "test.in"
+openRFile(file);
+int var; 
+readFile(file, "var");
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "null"
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+file = "test.in"
+
+Symbol Table:
+file --> "null"
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+openRFile(file);
+int var; 
+readFile(file, "var");
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+openRFile(file);
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int var; 
+readFile(file, "var");
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int var; 
+
+Symbol Table:
+file --> "test.in"
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, "var");
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 0
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, "var");
+
+Symbol Table:
+file --> "test.in"
+var --> 0
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, "var");
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+1
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+readFile(file, "var");
+
+Symbol Table:
+file --> "test.in"
+var --> 1
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 2
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(var); 
+
+Symbol Table:
+file --> "test.in"
+var --> 2
+
+Output Stream:
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+closeRFile(file);
+
+Symbol Table:
+file --> "test.in"
+var --> 2
+
+Output Stream:
+2
+
+File Table:
+"test.in" --> java.io.BufferedReader@5a10411
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+file --> "test.in"
+var --> 2
 
 Output Stream:
 
