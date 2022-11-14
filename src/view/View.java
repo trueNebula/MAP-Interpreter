@@ -72,9 +72,7 @@ public class View {
                     while(!controller.getCurrentProgramState().getExecutionStack().isEmpty()) {
 
                         try {
-                            // TODO: not this
                             controller.runAllSteps();
-
 
                         } catch (StatementExecutionException SEE) {
                             System.out.println("Caught StatementExecutionException:");
@@ -101,9 +99,8 @@ public class View {
                     System.out.println("Running Steps...");
 
                     try {
-                        // TODO: still not this
                         if (!controller.getCurrentProgramState().getExecutionStack().isEmpty())
-                            controller.runOneStep(controller.getCurrentProgramState());
+                            controller.runOneStep(controller.getCurrentProgramState(), true);
 
                         else
                             System.out.println("Nothing to execute!");

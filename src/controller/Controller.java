@@ -17,7 +17,8 @@ public class Controller {
 
     }
 
-    public ProgramState runOneStep(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
+    @SuppressWarnings("UnusedReturnValue")
+    public ProgramState runOneStep(ProgramState state, boolean display) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
         IStack<IStatement> exeStack = state.getExecutionStack();
 
         if(exeStack.isEmpty())
@@ -25,7 +26,9 @@ public class Controller {
 
         IStatement currentStatement = exeStack.pop();
         currentStatement.execute(state);
-        printProgramState(state);
+
+        if(display)
+            printProgramState(state);
 
         return state;
 
@@ -35,7 +38,7 @@ public class Controller {
         ProgramState progState = repository.getCurrentProgramState();
 
         while(!progState.getExecutionStack().isEmpty()){
-            runOneStep(progState);
+            runOneStep(progState, false);
             // maybe display some stuff
 
             if(!progState.getOutputStream().isEmpty())
