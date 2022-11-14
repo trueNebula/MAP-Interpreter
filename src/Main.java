@@ -4,7 +4,7 @@ import repository.Repository;
 
 public class Main {
     public static void main(String[] args) {
-        Repository repo = new Repository();
+        Repository repo = new Repository("log.txt");
         Controller controller = new Controller(repo);
         View view = new View(controller);
 

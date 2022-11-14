@@ -2,6 +2,7 @@ package view;
 import controller.Controller;
 import model.exceptions.CollectionException;
 import model.exceptions.ExpressionEvaluationException;
+import model.exceptions.LoggingException;
 import model.exceptions.StatementExecutionException;
 
 import java.util.Scanner;
@@ -87,6 +88,11 @@ public class View {
                         } catch (CollectionException CE) {
                             System.out.println("Caught CollectionException");
                             System.out.println(CE.getMessage() + "\n");
+                            break;
+
+                        } catch (LoggingException LE) {
+                            System.out.println("Caught LoggingException");
+                            System.out.println(LE.getMessage() + "\n");
                             break;
 
                         }

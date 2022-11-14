@@ -3,6 +3,7 @@ import model.collections.list.GenericList;
 import model.collections.stack.IStack;
 import model.exceptions.CollectionException;
 import model.exceptions.ExpressionEvaluationException;
+import model.exceptions.LoggingException;
 import model.exceptions.StatementExecutionException;
 import model.statements.IStatement;
 import model.structures.ProgramState;
@@ -34,12 +35,13 @@ public class Controller {
 
     }
 
-    public void runAllSteps() throws StatementExecutionException, ExpressionEvaluationException, CollectionException{
+    public void runAllSteps() throws StatementExecutionException, ExpressionEvaluationException, CollectionException, LoggingException {
         ProgramState progState = repository.getCurrentProgramState();
+        repository.logProgramState();
 
         while(!progState.getExecutionStack().isEmpty()){
             runOneStep(progState, false);
-            // maybe display some stuff
+            repository.logProgramState();
 
             if(!progState.getOutputStream().isEmpty())
                 printOutput();

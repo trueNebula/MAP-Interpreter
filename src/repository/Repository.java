@@ -5,6 +5,7 @@ import model.collections.list.GenericList;
 import model.collections.list.IList;
 import model.collections.stack.GenericStack;
 import model.collections.stack.IStack;
+import model.exceptions.LoggingException;
 import model.expressions.ValueExpression;
 import model.expressions.VariableExpression;
 import model.statements.*;
@@ -15,16 +16,16 @@ import model.values.IValue;
 import model.values.IntValue;
 import model.values.StringValue;
 
-import java.io.BufferedReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Repository {
     List<ProgramState> repo = new ArrayList<>();
-
     public IStatement bigBoy, ifTest, printTest;
+    String logFilePath;
 
-    public Repository(){
+    public Repository(String logPath){
         // create mock program
         bigBoy = new CompoundStatement(
                 new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
@@ -53,6 +54,8 @@ public class Repository {
         IList<IValue> out = new GenericList<>();
         IDictionary<StringValue, BufferedReader> fTable = new GenericDictionary<>();
 
+        logFilePath = logPath;
+
         repo.add(new ProgramState(exeStack, symTable, out, fTable, bigBoy));
 
     }
@@ -80,6 +83,22 @@ public class Repository {
                 repo.get(0).getExecutionStack().push(ifTest);
                 repo.get(0).setOriginalProgram(ifTest);
             }
+
+        }
+
+    }
+
+    public void logProgramState() throws LoggingException{
+        try {
+            PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
+
+            logFile.println("Test");
+            logFile.close();
+
+        }
+
+        catch (IOException IOE) {
+            throw new LoggingException(IOE.getMessage());
 
         }
 
