@@ -8,9 +8,12 @@ import java.util.Scanner;
 public class TextMenu {
     @SuppressWarnings("FieldMayBeFinal")
     private Map<String, Command> commands;
+    @SuppressWarnings("FieldMayBeFinal")
+    private String menuName;
 
-    public TextMenu(){
+    public TextMenu(String name){
         commands = new HashMap<>();
+        menuName = name;
 
     }
 
@@ -20,7 +23,7 @@ public class TextMenu {
     }
 
     public void printMenu(){
-        System.out.println("BogoScript Interpeter");
+        System.out.println(menuName);
 
         for(Command i: commands.values()){
             String line = String.format("%4s : %s", i.getKey(), i.getDescription());
