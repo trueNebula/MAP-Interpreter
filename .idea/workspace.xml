@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="implemented ChangeProgramCommand and ChangeMenuCommand">
-      <change afterPath="$PROJECT_DIR$/src/model/commands/ViewProgramCommand.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="implemented ViewProgramCommand">
+      <change afterPath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/ChangeProgramCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ChangeProgramCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
       <workItem from="1667807107199" duration="1054000" />
       <workItem from="1667808224826" duration="16799000" />
       <workItem from="1668345925287" duration="711000" />
-      <workItem from="1668403421822" duration="17702000" />
+      <workItem from="1668403421822" duration="18582000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -242,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668430540852</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="implemented ViewProgramCommand">
+      <created>1668431116904</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1668431116904</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +320,8 @@
     <MESSAGE value="added readFile Statement" />
     <MESSAGE value="implemented Text Menu" />
     <MESSAGE value="implemented ChangeProgramCommand and ChangeMenuCommand" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented ChangeProgramCommand and ChangeMenuCommand" />
+    <MESSAGE value="implemented ViewProgramCommand" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented ViewProgramCommand" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

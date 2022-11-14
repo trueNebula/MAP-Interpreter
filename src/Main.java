@@ -1,4 +1,5 @@
 import model.commands.*;
+import model.expressions.RelationalExpression;
 import model.expressions.ValueExpression;
 import model.expressions.VariableExpression;
 import model.statements.*;
@@ -13,12 +14,14 @@ import controller.Controller;
 import repository.Repository;
 
 public class Main {
-    public static IStatement bigBoy, printTest, ifTest, rFileTest;
+    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest;
     public static ProgramRepository programRepo;
     public static void main(String[] args) {
+        // initialize Program Repo and create programs
         programRepo = new ProgramRepository();
         createPrograms();
 
+        // initialize structures for each program and add them to the Program Repo
         Repository repo1 = new Repository(bigBoy, "log1.txt");
         Controller cont1 = new Controller(repo1);
         programRepo.addProgram(cont1);
@@ -35,11 +38,16 @@ public class Main {
         Controller cont4 = new Controller(repo4);
         programRepo.addProgram(cont4);
 
+        Repository repo5 = new Repository(relTest, "log5.txt");
+        Controller cont5 = new Controller(repo5);
+        programRepo.addProgram(cont5);
+
+        // create Main menu and Program menu and start
         TextMenu menu = new TextMenu("BogoScript Interpreter");
         TextMenu programMenu = new TextMenu("Select a Program:");
         menu.addCommand(new ChangeMenuCommand("1", "Change Program", programMenu));
-        menu.addCommand(new ViewProgramCommand("2", "View Program", cont1));
-        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont1));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", cont5));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont5));
         menu.addCommand(new ExitCommand("4", "Exit."));
 
         programMenu.addCommand(new ChangeMenuCommand("0", "Back", menu));
@@ -104,6 +112,13 @@ public class Main {
                                         )
                                 )
                         )
+                );
+
+        relTest =
+                new IfStatement(
+                        new RelationalExpression(new ValueExpression(new IntValue(3)), ">", new ValueExpression(new IntValue(5))),
+                        new PrintStatement(new ValueExpression(new BoolValue(true))),
+                        new PrintStatement(new ValueExpression(new BoolValue(false)))
                 );
 
     }

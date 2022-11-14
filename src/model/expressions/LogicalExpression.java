@@ -42,12 +42,12 @@ public class LogicalExpression implements IExpression{
             }
 
             else
-                throw new ExpressionEvaluationException("Second Operand is not a Boolean");
+                throw new ExpressionEvaluationException("Second Operand is not a Boolean!");
 
         }
 
         else
-            throw new ExpressionEvaluationException("First Operand is not a Boolean");
+            throw new ExpressionEvaluationException("First Operand is not a Boolean!");
 
         return new BoolValue(false);
 
