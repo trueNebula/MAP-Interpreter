@@ -1,0 +1,48 @@
+---------------
+LOG START
+
+ExeStack:
+if(0) then (print(true); ) else (print(false); ))
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(false); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+
+Output Stream:
+false
+
+File Table:
+
+LOG END
+---------------
+
+

@@ -6,15 +6,9 @@ import model.collections.list.IList;
 import model.collections.stack.GenericStack;
 import model.collections.stack.IStack;
 import model.exceptions.LoggingException;
-import model.expressions.ValueExpression;
-import model.expressions.VariableExpression;
 import model.statements.*;
 import model.structures.ProgramState;
-import model.types.IntType;
-import model.types.StringType;
-import model.values.BoolValue;
 import model.values.IValue;
-import model.values.IntValue;
 import model.values.StringValue;
 
 import java.io.*;
@@ -23,64 +17,10 @@ import java.util.List;
 
 public class Repository {
     List<ProgramState> repo = new ArrayList<>();
-    public IStatement bigBoy, ifTest, printTest, rFileTest;
+    public IStatement originalProgram;
     String logFilePath;
 
-    public Repository(String logPath){
-        // create mock program
-        bigBoy = new CompoundStatement(
-                new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
-                        new VariableAssignmentStatement("v",
-                                new ValueExpression(
-                                        new IntValue(2))),
-                new PrintStatement(new VariableExpression("v"))
-                ));
-
-        ifTest =
-                new IfStatement(
-                        new ValueExpression(new IntValue(0)),
-                        new PrintStatement(new ValueExpression(new BoolValue(true))),
-                        new PrintStatement(new ValueExpression(new BoolValue(false)))
-                );
-
-        printTest =
-                new CompoundStatement(
-                        new PrintStatement(new ValueExpression(new IntValue(1))),
-                        new PrintStatement(new ValueExpression(new IntValue(2)))
-                );
-
-        rFileTest =
-                new CompoundStatement(
-                        new VariableDeclarationStatement("file", new StringType()),
-                        new CompoundStatement(
-                                new VariableAssignmentStatement("file",
-                                        new ValueExpression(
-                                                new StringValue("test.in"))),
-                                new CompoundStatement(
-                                        new OpenRFile(new VariableExpression("file")),
-                                        new CompoundStatement(
-                                                new VariableDeclarationStatement("var", new IntType()),
-                                                new CompoundStatement(
-                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
-                                                        new CompoundStatement(
-                                                                new PrintStatement(new VariableExpression("var")),
-                                                                new CompoundStatement(
-                                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
-                                                                        new CompoundStatement(
-                                                                                new PrintStatement(new VariableExpression("var")),
-                                                                                new CloseRFile(new VariableExpression("file"))
-                                                                        )
-                                                                )
-
-                                                        )
-
-                                                )
-
-                                        )
-                                )
-                        )
-                );
-
+    public Repository(IStatement program, String logPath){
 
         // create Structures
         IStack<IStatement> exeStack = new GenericStack<>();
@@ -88,9 +28,10 @@ public class Repository {
         IList<IValue> out = new GenericList<>();
         IDictionary<StringValue, BufferedReader> fTable = new GenericDictionary<>();
 
+        originalProgram = program;
         logFilePath = logPath;
 
-        repo.add(new ProgramState(exeStack, symTable, out, fTable, rFileTest));
+        repo.add(new ProgramState(exeStack, symTable, out, fTable, program));
 
     }
 
@@ -99,34 +40,6 @@ public class Repository {
 
     }
 
-    public void changeProgram(int i){
-
-        switch (i) {
-            case 1 -> {
-                repo.get(0).getExecutionStack().pop();
-                repo.get(0).getExecutionStack().push(bigBoy);
-                repo.get(0).setOriginalProgram(bigBoy);
-            }
-            case 2 -> {
-                repo.get(0).getExecutionStack().pop();
-                repo.get(0).getExecutionStack().push(printTest);
-                repo.get(0).setOriginalProgram(printTest);
-            }
-            case 3 -> {
-                repo.get(0).getExecutionStack().pop();
-                repo.get(0).getExecutionStack().push(ifTest);
-                repo.get(0).setOriginalProgram(ifTest);
-            }
-            case 4 -> {
-                repo.get(0).getExecutionStack().pop();
-                repo.get(0).getExecutionStack().push(rFileTest);
-                repo.get(0).setOriginalProgram(rFileTest);
-
-            }
-
-        }
-
-    }
 
     public void logProgramState() throws LoggingException{
         try {

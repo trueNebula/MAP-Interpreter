@@ -1,0 +1,103 @@
+---------------
+LOG START
+
+ExeStack:
+int v; 
+v = 2
+print(v); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int v; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+v = 2
+print(v); 
+
+Symbol Table:
+v --> 0
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+v = 2
+
+Symbol Table:
+v --> 0
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(v); 
+
+Symbol Table:
+v --> 2
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+v --> 2
+
+Output Stream:
+2
+
+File Table:
+
+LOG END
+---------------
+
+

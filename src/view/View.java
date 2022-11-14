@@ -7,17 +7,21 @@ import model.exceptions.StatementExecutionException;
 
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class View {
     Scanner keyboard = new Scanner(System.in);
     int cmd;
     String cmdstring;
     Controller controller;
 
+    @SuppressWarnings("unused")
+
     public View(Controller c){
         controller = c;
 
     }
 
+    @SuppressWarnings("unused")
     public void start(){
         // System.out.println("hello world");
 
@@ -36,31 +40,6 @@ public class View {
             }
 
             switch(cmd){
-                case 0:
-                    // Select Program
-                    System.out.println("Available programs:");
-                    System.out.println("1. bigBoy");
-                    System.out.println(controller.getRepository().bigBoy.toString());
-                    System.out.println("2. printTest");
-                    System.out.println(controller.getRepository().printTest.toString());
-                    System.out.println("3. ifTest");
-                    System.out.println(controller.getRepository().ifTest.toString());
-                    cmdstring = keyboard.nextLine();
-
-                    try{
-                        cmd = Integer.parseInt(cmdstring);
-
-                    }
-
-                    catch (NumberFormatException nfe){
-                        cmd = 1;
-
-                    }
-
-                    controller.changeProgram(cmd);
-
-                    break;
-
                 case 1:
                     System.out.println("Current Program:");
                     System.out.println(controller.getCurrentProgramState().getExecutionStack().peek());

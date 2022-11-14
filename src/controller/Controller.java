@@ -55,11 +55,7 @@ public class Controller {
 
     }
 
-    public void changeProgram(int i){
-        repository.changeProgram(i);
-
-    }
-
+    @SuppressWarnings("unused")
     public Repository getRepository(){
         return repository;
 
