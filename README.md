@@ -10,10 +10,10 @@ Its main function is to parse the code of a program and output the result of sai
 ## Table of Contents:
  - [Toy Language Description](#toy-language-description) 
  - [Program Structure](#program-structure)
-   - [Model](#model)
-   - [Controller](#controller)
+   - [model](#model)
+   - [controller](#controller)
    - [Repository](#repository)
-   - [View](#view)
+   - [view](#view)
  - [Extending the Interpeter](#extending-the-interpeter)
 
 ---
@@ -60,12 +60,12 @@ The ***OutputStream*** will hold all of the messages printed by the program.
 
 ---
 ## Program Structure
-The Interpreter is built using the Model-View-Controller-Repository architecture.
+The Interpreter is built using the model-view-controller-Repository architecture.
 
 
 ---
-## Model
-The ***Model*** contains classes that describe every element of the program (ProgramState, Statements, Expressions, Values, Types), as well as Exceptions and Collections.
+## model
+The ***model*** contains classes that describe every element of the program (ProgramState, Statements, Expressions, Values, Types), as well as Exceptions and Collections.
 
 ### Exceptions:
  - CollectionException
@@ -79,10 +79,10 @@ The ***Model*** contains classes that describe every element of the program (Pro
 
 
 ---
-## Controller
-The ***Controller*** holds a reference to the Repository.
+## controller
+The ***controller*** holds a reference to the Repository.
 
-The Controller has two main methods: 
+The controller has two main methods: 
  - runOneStep
  - runAllSteps
 
@@ -99,9 +99,9 @@ Currently, its only purpose is to hold a reference to the current ProgramState.
 In the future, it will be extended to hold multiple threads of the same Program execution.
 
 ---
-## View
+## view
 
-The ***View*** is the CLI used to execute the Program.
+The ***view*** is the CLI used to execute the Program.
 
 
 ---
@@ -111,9 +111,9 @@ For future assignments, a few extentions will have to be made:
  - Adding more Values and Types
  - Adding more Expressions (I think)
  - Multithreading
-   - Extending the Controller to work with Threads
+   - Extending the controller to work with Threads
    -  Extending the Repository to hold all Threads
- - Probably some stuff to do with the CLI View
+ - Probably some stuff to do with the CLI view
 
 
 ---

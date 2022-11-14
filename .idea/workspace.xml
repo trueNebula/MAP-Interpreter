@@ -4,14 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added the worst possible program switching tech">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Structures/ProgramState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Revamped view printing + added toString() overrides to collections">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Dictionary/IDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/list/GenericList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/IList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/list/IList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/stack/GenericStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/IStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/stack/IStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Exceptions/CollectionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/exceptions/CollectionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Exceptions/ExpressionEvaluationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/exceptions/ExpressionEvaluationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Exceptions/StatementExecutionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/exceptions/StatementExecutionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/IExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/IExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Expressions/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/NoStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/NoStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Types/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Types/IType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/IType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Types/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/types/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/BoolValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/IValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Values/IntValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IntValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repo/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +101,7 @@
       <workItem from="1667807107199" duration="1054000" />
       <workItem from="1667808224826" duration="16799000" />
       <workItem from="1668345925287" duration="711000" />
-      <workItem from="1668403421822" duration="1900000" />
+      <workItem from="1668403421822" duration="2253000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -154,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667839415944</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Revamped view printing + added toString() overrides to collections">
+      <created>1668406749568</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668406749568</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +243,8 @@
     <MESSAGE value="Added output to runOneStep" />
     <MESSAGE value="Added current program cmd in view" />
     <MESSAGE value="Added the worst possible program switching tech" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the worst possible program switching tech" />
+    <MESSAGE value="Revamped view printing + added toString() overrides to collections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revamped view printing + added toString() overrides to collections" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
