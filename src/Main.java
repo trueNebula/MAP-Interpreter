@@ -1,7 +1,4 @@
-import model.commands.ChangeProgramCommand;
-import model.commands.ExitCommand;
-import model.commands.RunProgramCommand;
-import model.commands.ChangeMenuCommand;
+import model.commands.*;
 import model.expressions.ValueExpression;
 import model.expressions.VariableExpression;
 import model.statements.*;
@@ -41,8 +38,9 @@ public class Main {
         TextMenu menu = new TextMenu("BogoScript Interpreter");
         TextMenu programMenu = new TextMenu("Select a Program:");
         menu.addCommand(new ChangeMenuCommand("1", "Change Program", programMenu));
-        menu.addCommand(new RunProgramCommand("2", "Run Selected Program.", cont1));
-        menu.addCommand(new ExitCommand("3", "Exit."));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", cont1));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont1));
+        menu.addCommand(new ExitCommand("4", "Exit."));
 
         programMenu.addCommand(new ChangeMenuCommand("0", "Back", menu));
         programMenu.addCommand(new ChangeProgramCommand("1", "Example Program", menu, 0, programRepo));

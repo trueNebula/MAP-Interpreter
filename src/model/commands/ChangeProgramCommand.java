@@ -23,7 +23,9 @@ public class ChangeProgramCommand extends Command{
     @Override
     public void execute() {
         // this is so fucking janky
-        menu.addCommand(new RunProgramCommand("2", "Run Selected Program.", programRepository.getProgramAtIndex(index)));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", programRepository.getProgramAtIndex(index)));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program.", programRepository.getProgramAtIndex(index)));
+        menu.show();
 
     }
 
