@@ -13,7 +13,9 @@ import model.types.IntType;
 import model.values.BoolValue;
 import model.values.IValue;
 import model.values.IntValue;
+import model.values.StringValue;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,8 +51,9 @@ public class Repository {
         IStack<IStatement> exeStack = new GenericStack<>();
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
+        IDictionary<StringValue, BufferedReader> fTable = new GenericDictionary<>();
 
-        repo.add(new ProgramState(exeStack, symTable, out, bigBoy));
+        repo.add(new ProgramState(exeStack, symTable, out, fTable, bigBoy));
 
     }
 

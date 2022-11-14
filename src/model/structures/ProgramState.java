@@ -4,6 +4,9 @@ import model.collections.list.*;
 import model.collections.stack.*;
 import model.statements.IStatement;
 import model.values.IValue;
+import model.values.StringValue;
+
+import java.io.BufferedReader;
 
 public class ProgramState {
     IStack<IStatement> executionStack;
@@ -11,10 +14,13 @@ public class ProgramState {
     IList<IValue> outputStream;
     IStatement originalProgram;
 
-    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IStatement original){
+    IDictionary<StringValue, BufferedReader> fileTable;
+
+    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IStatement original){
         executionStack = exeStack;
         symbolTable = symTable;
         outputStream = out;
+        fileTable = fTable;
         originalProgram = original;
 
         exeStack.push(originalProgram);
@@ -51,6 +57,12 @@ public class ProgramState {
     }
 
     @SuppressWarnings("unused")
+    public IDictionary<StringValue, BufferedReader> getFileTable(){
+        return fileTable;
+
+    }
+
+    @SuppressWarnings("unused")
     public IStatement getOriginalProgram(){
         return originalProgram;
 
@@ -74,6 +86,12 @@ public class ProgramState {
     @SuppressWarnings("unused")
     public void setOutputStream(IList<IValue> out){
         outputStream = out;
+
+    }
+
+    @SuppressWarnings("unused")
+    public void setFileTable(IDictionary<StringValue, BufferedReader> fTable){
+        fileTable = fTable;
 
     }
 
