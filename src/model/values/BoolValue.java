@@ -27,4 +27,16 @@ public class BoolValue implements IValue{
 
     }
 
+    @Override
+    public boolean equals(IValue val){
+        if(val == this)
+            return true;
+
+        if(val instanceof BoolValue)
+            return ((BoolValue) val).getValue() == value;
+
+        return false;
+
+    }
+
 }
