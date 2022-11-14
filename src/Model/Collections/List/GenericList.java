@@ -72,6 +72,20 @@ public class GenericList<T> implements IList<T>, Iterable<T>{
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        for(T i: elems){
+            result.append(i);
+            result.append("\n");
+
+        }
+
+        return result.toString();
+
+    }
+
 }
 
 class ListIterator<T> implements Iterator<T>{

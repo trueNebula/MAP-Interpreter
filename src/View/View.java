@@ -1,11 +1,8 @@
 package View;
 import Controller.Controller;
-import Model.Collections.List.GenericList;
 import Model.Exceptions.CollectionException;
 import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
-import Model.Statements.IStatement;
-import Model.Values.IValue;
 
 import java.util.Scanner;
 
@@ -77,14 +74,7 @@ public class View {
                         try {
                             // TODO: not this
                             controller.runAllSteps();
-                            GenericList<IValue> out = (GenericList<IValue>) controller.getCurrentProgramState().getOutputStream();
 
-                            for(IValue i : out){
-                                System.out.println(i.toString());
-
-                            }
-
-                            out.clear();
 
                         } catch (StatementExecutionException SEE) {
                             System.out.println("Caught StatementExecutionException:");
@@ -112,21 +102,10 @@ public class View {
 
                     try {
                         // TODO: still not this
-                        if (!controller.getCurrentProgramState().getExecutionStack().isEmpty()) {
-                            IStatement currentStatement = controller.getCurrentProgramState().getExecutionStack().peek();
+                        if (!controller.getCurrentProgramState().getExecutionStack().isEmpty())
                             controller.runOneStep(controller.getCurrentProgramState());
-                            GenericList<IValue> out = (GenericList<IValue>) controller.getCurrentProgramState().getOutputStream();
 
-                            System.out.println(currentStatement.toString());
-
-                            for (IValue i : out) {
-                                System.out.println(i.toString());
-
-                            }
-
-                            out.clear();
-
-                        } else
+                        else
                             System.out.println("Nothing to execute!");
 
                     }

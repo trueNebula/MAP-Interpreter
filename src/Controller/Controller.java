@@ -1,10 +1,12 @@
 package Controller;
+import Model.Collections.List.GenericList;
 import Model.Collections.Stack.IStack;
 import Model.Exceptions.CollectionException;
 import Model.Exceptions.ExpressionEvaluationException;
 import Model.Exceptions.StatementExecutionException;
 import Model.Statements.IStatement;
 import Model.Structures.ProgramState;
+import Model.Values.IValue;
 import Repo.Repository;
 
 public class Controller {
@@ -23,6 +25,7 @@ public class Controller {
 
         IStatement currentStatement = exeStack.pop();
         currentStatement.execute(state);
+        printProgramState(state);
 
         return state;
 
@@ -36,7 +39,7 @@ public class Controller {
             // maybe display some stuff
 
             if(!progState.getOutputStream().isEmpty())
-                return;
+                printOutput();
 
         }
 
@@ -54,6 +57,24 @@ public class Controller {
 
     public Repository getRepository(){
         return repository;
+
+    }
+
+
+    public void printOutput(){
+        GenericList<IValue> out = (GenericList<IValue>) getCurrentProgramState().getOutputStream();
+
+        for(IValue i : out){
+            System.out.println(i.toString());
+
+        }
+
+        out.clear();
+
+    }
+
+    public void printProgramState(ProgramState state){
+        System.out.println(state);
 
     }
 

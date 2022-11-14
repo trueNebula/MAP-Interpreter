@@ -23,28 +23,34 @@ public class ProgramState {
 
     @Override
     public String toString(){
-        return "";
+        return "ExeStack: \n" + executionStack.toString() + "\n-------------\n\nSymbol Table: \n"
+                + symbolTable.toString() + "\n-------------\n\nOutput Stream: \n"
+                + outputStream.toString() + "\n-------------\n";
 
     }
 
 
     // Getters
 
+    @SuppressWarnings("unused")
     public IStack<IStatement> getExecutionStack(){
         return executionStack;
 
     }
 
+    @SuppressWarnings("unused")
     public IDictionary<String, IValue> getSymbolTable(){
         return symbolTable;
 
     }
 
+    @SuppressWarnings("unused")
     public IList<IValue> getOutputStream(){
         return outputStream;
 
     }
 
+    @SuppressWarnings("unused")
     public IStatement getOriginalProgram(){
         return originalProgram;
 
@@ -53,21 +59,25 @@ public class ProgramState {
 
     // Setters
 
+    @SuppressWarnings("unused")
     public void setExecutionStack(IStack<IStatement> exeStack){
         executionStack = exeStack;
 
     }
 
+    @SuppressWarnings("unused")
     public void setSymbolTable(IDictionary<String, IValue> symTable){
         symbolTable = symTable;
 
     }
 
+    @SuppressWarnings("unused")
     public void setOutputStream(IList<IValue> out){
         outputStream = out;
 
     }
 
+    @SuppressWarnings("unused")
     public void setOriginalProgram(IStatement original){
         originalProgram = original;
 

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="Added the worst possible program switching tech">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Values/BoolValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Dictionary/GenericDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/List/GenericList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Collections/Stack/GenericStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Structures/ProgramState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,19 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.intentionPowerPack"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/MAP-Interpreter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run boy run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -69,6 +74,8 @@
       <workItem from="1667476692280" duration="13918000" />
       <workItem from="1667807107199" duration="1054000" />
       <workItem from="1667808224826" duration="16799000" />
+      <workItem from="1668345925287" duration="711000" />
+      <workItem from="1668403421822" duration="1900000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>

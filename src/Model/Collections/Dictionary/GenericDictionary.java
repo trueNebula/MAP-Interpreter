@@ -38,4 +38,21 @@ public class GenericDictionary<T, K> implements IDictionary<T, K> {
         return elems.size();
 
     }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        for(T i: elems.keySet()){
+            result.append(i);
+            result.append(" --> ");
+            result.append(elems.get(i));
+            result.append("\n");
+
+        }
+
+        return result.toString();
+
+    }
+
 }

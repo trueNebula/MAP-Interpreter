@@ -33,4 +33,18 @@ public class GenericStack<T> implements IStack<T>{
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        for (T i : elems) {
+            result.append(i);
+            result.append("\n");
+
+        }
+
+        return result.toString();
+
+    }
+
 }
