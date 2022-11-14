@@ -12,7 +12,7 @@ public class StringType implements IType{
 
     @Override
     public IValue defaultValue() {
-        return new StringValue("");
+        return new StringValue("null");
 
     }
 

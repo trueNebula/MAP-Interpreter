@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Repository {
     List<ProgramState> repo = new ArrayList<>();
-    public IStatement bigBoy, ifTest, printTest, openRFileTest;
+    public IStatement bigBoy, ifTest, printTest, rFileTest;
     String logFilePath;
 
     public Repository(String logPath){
@@ -49,18 +49,19 @@ public class Repository {
                         new PrintStatement(new ValueExpression(new IntValue(2)))
                 );
 
-        openRFileTest =
+        rFileTest =
                 new CompoundStatement(
                         new VariableDeclarationStatement("file", new StringType()),
                         new CompoundStatement(
                                 new VariableAssignmentStatement("file",
                                         new ValueExpression(
                                                 new StringValue("log.txt"))),
-
-                                new OpenRFile(new VariableExpression("file"))
+                                new CompoundStatement(
+                                        new OpenRFile(new VariableExpression("file")),
+                                        new CloseRFile(new VariableExpression("file"))
+                                )
                         )
                 );
-
 
 
         // create Structures
@@ -71,7 +72,7 @@ public class Repository {
 
         logFilePath = logPath;
 
-        repo.add(new ProgramState(exeStack, symTable, out, fTable, openRFileTest));
+        repo.add(new ProgramState(exeStack, symTable, out, fTable, rFileTest));
 
     }
 
@@ -100,8 +101,8 @@ public class Repository {
             }
             case 4 -> {
                 repo.get(0).getExecutionStack().pop();
-                repo.get(0).getExecutionStack().push(openRFileTest);
-                repo.get(0).setOriginalProgram(openRFileTest);
+                repo.get(0).getExecutionStack().push(rFileTest);
+                repo.get(0).setOriginalProgram(rFileTest);
 
             }
 

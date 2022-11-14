@@ -1,0 +1,140 @@
+---------------
+LOG START
+
+ExeStack:
+string file; 
+file = log.txt
+openRFile(file);
+closeRFile(file);
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+string file; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+file = log.txt
+openRFile(file);
+closeRFile(file);
+
+Symbol Table:
+file --> null
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+file = log.txt
+
+Symbol Table:
+file --> null
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+openRFile(file);
+closeRFile(file);
+
+Symbol Table:
+file --> log.txt
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+openRFile(file);
+
+Symbol Table:
+file --> log.txt
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+closeRFile(file);
+
+Symbol Table:
+file --> log.txt
+
+Output Stream:
+
+File Table:
+log.txt --> java.io.BufferedReader@41cf53f9
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+file --> log.txt
+
+Output Stream:
+
+File Table:
+
+LOG END
+---------------
+
+
