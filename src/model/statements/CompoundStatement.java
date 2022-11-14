@@ -30,4 +30,14 @@ public class CompoundStatement implements IStatement{
 
     }
 
+    public IStatement getFirst() {
+        return first;
+
+    }
+
+    public IStatement getSecond() {
+        return second;
+
+    }
+
 }

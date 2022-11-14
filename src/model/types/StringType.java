@@ -6,7 +6,7 @@ import model.values.StringValue;
 public class StringType implements IType{
     @Override
     public boolean equals(Object another){
-        return another instanceof IntType;
+        return another instanceof StringType;
 
     }
 
