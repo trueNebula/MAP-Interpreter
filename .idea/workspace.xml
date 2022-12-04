@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="implemented RelationalExpression and added a test program">
-      <change afterPath="$PROJECT_DIR$/src/model/types/ReferenceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="ReferenceType, ReferenceValue, heapTable">
+      <change afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,8 @@
       <workItem from="1668403421822" duration="18696000" />
       <workItem from="1668437992856" duration="595000" />
       <workItem from="1670145439518" duration="692000" />
-      <workItem from="1670150836812" duration="3712000" />
+      <workItem from="1670150836812" duration="4281000" />
+      <workItem from="1670171360171" duration="2986000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668431894973</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="ReferenceType, ReferenceValue, heapTable">
+      <created>1670170858163</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670170858163</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +314,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added README.md" />
     <MESSAGE value="Added View + fixed collection instantiation bug" />
     <MESSAGE value="Changed ArithExp and LogicExp operator to use char" />
     <MESSAGE value="Added a simple program to run" />
@@ -332,7 +338,8 @@
     <MESSAGE value="implemented ChangeProgramCommand and ChangeMenuCommand" />
     <MESSAGE value="implemented ViewProgramCommand" />
     <MESSAGE value="implemented RelationalExpression and added a test program" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented RelationalExpression and added a test program" />
+    <MESSAGE value="ReferenceType, ReferenceValue, heapTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReferenceType, ReferenceValue, heapTable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

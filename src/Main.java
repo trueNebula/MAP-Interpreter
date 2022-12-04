@@ -4,6 +4,7 @@ import model.expressions.ValueExpression;
 import model.expressions.VariableExpression;
 import model.statements.*;
 import model.types.IntType;
+import model.types.ReferenceType;
 import model.types.StringType;
 import model.values.BoolValue;
 import model.values.IntValue;
@@ -14,7 +15,7 @@ import controller.Controller;
 import repository.Repository;
 
 public class Main {
-    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest;
+    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapTest0;
     public static ProgramRepository programRepo;
     public static void main(String[] args) {
         // initialize Program Repo and create programs
@@ -42,12 +43,16 @@ public class Main {
         Controller cont5 = new Controller(repo5);
         programRepo.addProgram(cont5);
 
+        Repository repo6 = new Repository(heapTest, "log6.txt");
+        Controller cont6 = new Controller(repo6);
+        programRepo.addProgram(cont6);
+
         // create Main menu and Program menu and start
         TextMenu menu = new TextMenu("BogoScript Interpreter");
         TextMenu programMenu = new TextMenu("Select a Program:");
         menu.addCommand(new ChangeMenuCommand("1", "Change Program", programMenu));
-        menu.addCommand(new ViewProgramCommand("2", "View Program", cont5));
-        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont5));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", cont6));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont6));
         menu.addCommand(new ExitCommand("4", "Exit."));
 
         programMenu.addCommand(new ChangeMenuCommand("0", "Back", menu));
@@ -55,6 +60,7 @@ public class Main {
         programMenu.addCommand(new ChangeProgramCommand("2", "PrintTest Program", menu, 1, programRepo));
         programMenu.addCommand(new ChangeProgramCommand("3", "IfTest Program", menu, 2, programRepo));
         programMenu.addCommand(new ChangeProgramCommand("4", "RFileTest Program", menu, 3, programRepo));
+        programMenu.addCommand(new ChangeProgramCommand("5", "HeapTest Program", menu, 4, programRepo));
 
         menu.show();
 
@@ -119,6 +125,35 @@ public class Main {
                         new RelationalExpression(new ValueExpression(new IntValue(3)), ">", new ValueExpression(new IntValue(5))),
                         new PrintStatement(new ValueExpression(new BoolValue(true))),
                         new PrintStatement(new ValueExpression(new BoolValue(false)))
+                );
+
+        heapTest0 =
+                new CompoundStatement(
+                        new VariableDeclarationStatement("p", new ReferenceType(new IntType())),
+                        new CompoundStatement(
+                                new AllocationStatement("p", new ValueExpression(new IntValue(20))),
+                                new PrintStatement(new VariableExpression("p"))
+                        )
+                );
+
+        heapTest =
+                new CompoundStatement(
+                        new VariableDeclarationStatement("p", new ReferenceType(new IntType())),
+                        new CompoundStatement(
+                                new AllocationStatement("p", new ValueExpression(new IntValue(20))),
+                                new CompoundStatement(
+                                        new VariableDeclarationStatement("v", new ReferenceType(new ReferenceType(new IntType()))),
+                                        new CompoundStatement(
+                                                new AllocationStatement("v", new VariableExpression("p")),
+                                                new CompoundStatement(
+                                                        new PrintStatement(new VariableExpression("p")),
+                                                        new PrintStatement(new VariableExpression("v"))
+                                                )
+
+                                        )
+                                )
+
+                        )
                 );
 
     }

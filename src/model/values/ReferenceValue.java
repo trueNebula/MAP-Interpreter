@@ -16,6 +16,12 @@ public class ReferenceValue implements IValue{
     @SuppressWarnings("unused")
     public int getAddress(){
         return address;
+
+    }
+
+    public String toString(){
+        return address + ", " + locationType;
+
     }
 
     @Override

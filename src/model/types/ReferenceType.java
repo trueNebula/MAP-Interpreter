@@ -26,7 +26,7 @@ public class ReferenceType implements IType{
     }
 
     public String toString() {
-        return "ref(" + inner.toString() + ")";
+        return inner.toString() + "*";
 
     }
 
