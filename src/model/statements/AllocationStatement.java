@@ -30,7 +30,7 @@ public class AllocationStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symbolTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IDictionary<Integer, IValue> heapTable = state.getHeapTable();
 
         // check if variable declared
         if(symbolTable.get(variableName) != null){
@@ -38,16 +38,16 @@ public class AllocationStatement implements IStatement{
 
             // check if declared variable is of reference type
             if(variableValue.getType() instanceof ReferenceType variableType) {
-                IValue exprressionEvalResult = expression.evaluate(symbolTable);
+                IValue exprressionEvalResult = expression.evaluate(symbolTable, heapTable);
 
                 //
                 if(Objects.equals(exprressionEvalResult.getType(), variableType.getInner())){
                     int heapAddress = 1;
 
-                    while(heap.get(heapAddress) != null)
+                    while(heapTable.get(heapAddress) != null)
                         heapAddress++;
 
-                    heap.put(heapAddress, exprressionEvalResult);
+                    heapTable.put(heapAddress, exprressionEvalResult);
                     symbolTable.put(variableName, new ReferenceValue(heapAddress, variableType.getInner()));
 
                 }
@@ -60,14 +60,14 @@ public class AllocationStatement implements IStatement{
             }
 
             else{
-                throw new StatementExecutionException("The used variable " + variableName + " is not a reference!");
+                throw new StatementExecutionException("Variable " + variableName + " is not a reference!");
 
             }
 
         }
 
         else{
-            throw new StatementExecutionException("The used variable " + variableName + " was not declared before!");
+            throw new StatementExecutionException("Variable " + variableName + " was not declared before!");
 
         }
 

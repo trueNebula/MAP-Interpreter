@@ -29,8 +29,9 @@ public class IfStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws ExpressionEvaluationException {
         IStack<IStatement> exeStack = state.getExecutionStack();
         IDictionary<String, IValue> symTable = state.getSymbolTable();
+        IDictionary<Integer, IValue> heap = state.getHeapTable();
 
-        IValue exprEvalResult = expr.evaluate(symTable);
+        IValue exprEvalResult = expr.evaluate(symTable, heap);
         boolean exprEvalResultBool;
 
         if(exprEvalResult.getType().toString().equals("bool"))

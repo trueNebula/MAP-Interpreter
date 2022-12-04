@@ -13,7 +13,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl) {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) {
         return tbl.get(id);
 
     }

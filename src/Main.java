@@ -1,7 +1,5 @@
 import model.commands.*;
-import model.expressions.RelationalExpression;
-import model.expressions.ValueExpression;
-import model.expressions.VariableExpression;
+import model.expressions.*;
 import model.statements.*;
 import model.types.IntType;
 import model.types.ReferenceType;
@@ -15,7 +13,7 @@ import controller.Controller;
 import repository.Repository;
 
 public class Main {
-    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapTest0;
+    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapRWTest;
     public static ProgramRepository programRepo;
     public static void main(String[] args) {
         // initialize Program Repo and create programs
@@ -43,7 +41,7 @@ public class Main {
         Controller cont5 = new Controller(repo5);
         programRepo.addProgram(cont5);
 
-        Repository repo6 = new Repository(heapTest, "log6.txt");
+        Repository repo6 = new Repository(heapRWTest, "log6.txt");
         Controller cont6 = new Controller(repo6);
         programRepo.addProgram(cont6);
 
@@ -127,15 +125,6 @@ public class Main {
                         new PrintStatement(new ValueExpression(new BoolValue(false)))
                 );
 
-        heapTest0 =
-                new CompoundStatement(
-                        new VariableDeclarationStatement("p", new ReferenceType(new IntType())),
-                        new CompoundStatement(
-                                new AllocationStatement("p", new ValueExpression(new IntValue(20))),
-                                new PrintStatement(new VariableExpression("p"))
-                        )
-                );
-
         heapTest =
                 new CompoundStatement(
                         new VariableDeclarationStatement("p", new ReferenceType(new IntType())),
@@ -154,6 +143,25 @@ public class Main {
                                 )
 
                         )
+                );
+
+        heapRWTest =
+                new CompoundStatement(
+                        heapTest,
+                        new CompoundStatement(
+                                new PrintStatement(new HeapReadExpression(new VariableExpression("p"))),
+                                new CompoundStatement(
+                                        new HeapWriteStatement("p", new ValueExpression(new IntValue(30))),
+                                        new CompoundStatement(
+                                                new PrintStatement(new ArithmeticExpression(new HeapReadExpression(new VariableExpression("p")), '+', new ValueExpression(new IntValue(5)))),
+                                                new PrintStatement(new HeapReadExpression(new HeapReadExpression(new VariableExpression("v"))))
+
+                                        )
+
+                                )
+
+                        )
+
                 );
 
     }

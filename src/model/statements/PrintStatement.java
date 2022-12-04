@@ -25,8 +25,9 @@ public class PrintStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IList<IValue> out = state.getOutputStream();
+        IDictionary<Integer, IValue> heap = state.getHeapTable();
 
-        out.add(expr.evaluate(symTable));
+        out.add(expr.evaluate(symTable, heap));
 
         return state;
 

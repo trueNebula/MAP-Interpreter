@@ -32,8 +32,9 @@ public class CloseRFile implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
+        IDictionary<Integer, IValue> heap = state.getHeapTable();
         IDictionary<StringValue, BufferedReader> fTable = state.getFileTable();
-        IValue evalResult = expr.evaluate(symTable);
+        IValue evalResult = expr.evaluate(symTable, heap);
 
         if(!Objects.equals(evalResult.getType(), new StringType()))
             throw new StatementExecutionException("Expression is not of String Type!");

@@ -5,8 +5,7 @@ import model.exceptions.ExpressionEvaluationException;
 import model.values.IValue;
 
 public interface IExpression {
-    IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException;
-
+    IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) throws ExpressionEvaluationException;
 
 
 }

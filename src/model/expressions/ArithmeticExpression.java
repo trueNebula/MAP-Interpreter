@@ -16,13 +16,20 @@ public class ArithmeticExpression implements IExpression{
     // * - multiplication
     // / - division
 
+    public ArithmeticExpression(IExpression expression1, char op, IExpression expression2){
+        exp1 = expression1;
+        exp2 = expression2;
+        operator = op;
+
+    }
+
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) throws ExpressionEvaluationException {
         IValue v1, v2;
-        v1 = exp1.evaluate(tbl);
+        v1 = exp1.evaluate(tbl, heap);
 
         if (v1.getType().equals(new IntType())){
-            v2 = exp2.evaluate(tbl);
+            v2 = exp2.evaluate(tbl, heap);
 
             if(v2.getType().equals(new IntType())){
                 IntValue i1 = (IntValue)v1;

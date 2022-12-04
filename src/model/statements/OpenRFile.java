@@ -34,7 +34,8 @@ public class OpenRFile implements IStatement{
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IDictionary<StringValue, BufferedReader> fTable = state.getFileTable();
-        IValue evalResult = expr.evaluate(symTable);
+        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IValue evalResult = expr.evaluate(symTable, heap);
 
         if(!Objects.equals(evalResult.getType(), new StringType()))
             throw new StatementExecutionException("Expression is not of String Type!");

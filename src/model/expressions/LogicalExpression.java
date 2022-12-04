@@ -15,12 +15,12 @@ public class LogicalExpression implements IExpression{
     // | - or
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl) throws ExpressionEvaluationException {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) throws ExpressionEvaluationException {
         IValue v1, v2;
-        v1 = exp1.evaluate(tbl);
+        v1 = exp1.evaluate(tbl, heap);
 
         if (v1.getType().equals(new BoolType())){
-            v2 = exp2.evaluate(tbl);
+            v2 = exp2.evaluate(tbl, heap);
 
             if(v2.getType().equals(new BoolType())){
                 BoolValue i1 = (BoolValue)v1;

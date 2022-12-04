@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="ReferenceType, ReferenceValue, heapTable">
-      <change afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="heap allocation">
+      <change afterPath="$PROJECT_DIR$/log6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/expressions/HeapReadExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/IExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/IExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +91,7 @@
       <workItem from="1668437992856" duration="595000" />
       <workItem from="1670145439518" duration="692000" />
       <workItem from="1670150836812" duration="4281000" />
-      <workItem from="1670171360171" duration="2986000" />
+      <workItem from="1670171360171" duration="8365000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -268,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670170858163</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="heap allocation">
+      <created>1670174518274</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670174518274</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +335,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added View + fixed collection instantiation bug" />
     <MESSAGE value="Changed ArithExp and LogicExp operator to use char" />
     <MESSAGE value="Added a simple program to run" />
     <MESSAGE value="Fixed a bunch of warnings" />
@@ -339,7 +359,8 @@
     <MESSAGE value="implemented ViewProgramCommand" />
     <MESSAGE value="implemented RelationalExpression and added a test program" />
     <MESSAGE value="ReferenceType, ReferenceValue, heapTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReferenceType, ReferenceValue, heapTable" />
+    <MESSAGE value="heap allocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="heap allocation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

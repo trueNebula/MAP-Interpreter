@@ -18,7 +18,7 @@ public class ValueExpression implements IExpression{
     }
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl) {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) {
         return e;
 
     }
