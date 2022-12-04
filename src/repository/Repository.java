@@ -27,11 +27,12 @@ public class Repository {
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
         IDictionary<StringValue, BufferedReader> fTable = new GenericDictionary<>();
+        IDictionary<Integer, IValue> heap = new GenericDictionary<>();
 
         originalProgram = program;
         logFilePath = logPath;
 
-        repo.add(new ProgramState(exeStack, symTable, out, fTable, program));
+        repo.add(new ProgramState(exeStack, symTable, out, fTable, heap, program));
 
     }
 
@@ -69,6 +70,10 @@ public class Repository {
 
             logFile.println("File Table:");
             logFile.print(repo.get(0).getFileTable());
+            logFile.println();
+
+            logFile.println("Heap Table:");
+            logFile.print(repo.get(0).getHeapTable());
             logFile.println();
 
             // finish up

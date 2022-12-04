@@ -12,15 +12,16 @@ public class ProgramState {
     IStack<IStatement> executionStack;
     IDictionary<String, IValue> symbolTable;
     IList<IValue> outputStream;
+    IDictionary<StringValue, BufferedReader> fileTable;
+    IDictionary<Integer, IValue> heapTable;
     IStatement originalProgram;
 
-    IDictionary<StringValue, BufferedReader> fileTable;
-
-    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IStatement original){
+    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IDictionary<Integer, IValue> heap, IStatement original){
         executionStack = exeStack;
         symbolTable = symTable;
         outputStream = out;
         fileTable = fTable;
+        heapTable = heap;
         originalProgram = original;
 
         exeStack.push(originalProgram);
@@ -31,7 +32,9 @@ public class ProgramState {
     public String toString(){
         return "ExeStack: \n" + executionStack.toString() + "\n-------------\n\nSymbol Table: \n"
                 + symbolTable.toString() + "\n-------------\n\nOutput Stream: \n"
-                + outputStream.toString() + "\n-------------\n";
+                + outputStream.toString() + "\n-------------\n\nFile Table: \n"
+                + fileTable.toString() + "\n-------------\n\nHeap Table: \n"
+                + heapTable.toString() + "\n-------------\n\n";
 
     }
 
@@ -50,7 +53,6 @@ public class ProgramState {
 
     }
 
-    @SuppressWarnings("unused")
     public IList<IValue> getOutputStream(){
         return outputStream;
 
@@ -59,6 +61,12 @@ public class ProgramState {
     @SuppressWarnings("unused")
     public IDictionary<StringValue, BufferedReader> getFileTable(){
         return fileTable;
+
+    }
+
+    @SuppressWarnings("unused")
+    public IDictionary<Integer, IValue> getHeapTable(){
+        return heapTable;
 
     }
 
@@ -92,6 +100,12 @@ public class ProgramState {
     @SuppressWarnings("unused")
     public void setFileTable(IDictionary<StringValue, BufferedReader> fTable){
         fileTable = fTable;
+
+    }
+
+    @SuppressWarnings("unused")
+    public void setHeapTable(IDictionary<Integer, IValue> heap){
+        heapTable = heap;
 
     }
 

@@ -94,3 +94,57 @@ LOG END
 ---------------
 
 
+---------------
+LOG START
+
+ExeStack:
+if(3 >5) then (print(true); ) else (print(false); ))
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(false); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+
+Output Stream:
+false
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+

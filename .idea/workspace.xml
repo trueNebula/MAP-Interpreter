@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="implemented ViewProgramCommand">
-      <change afterPath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="implemented RelationalExpression and added a test program">
+      <change afterPath="$PROJECT_DIR$/src/model/types/ReferenceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,21 +38,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/GitHub/MAP-Interpreter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/MAP-Interpreter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Run boy run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -73,7 +74,10 @@
       <workItem from="1667807107199" duration="1054000" />
       <workItem from="1667808224826" duration="16799000" />
       <workItem from="1668345925287" duration="711000" />
-      <workItem from="1668403421822" duration="18582000" />
+      <workItem from="1668403421822" duration="18696000" />
+      <workItem from="1668437992856" duration="595000" />
+      <workItem from="1670145439518" duration="692000" />
+      <workItem from="1670150836812" duration="3712000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -250,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668431116904</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="implemented RelationalExpression and added a test program">
+      <created>1668431894973</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1668431894973</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +307,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="A2 init" />
     <MESSAGE value="Added README.md" />
     <MESSAGE value="Added View + fixed collection instantiation bug" />
     <MESSAGE value="Changed ArithExp and LogicExp operator to use char" />
@@ -321,7 +331,8 @@
     <MESSAGE value="implemented Text Menu" />
     <MESSAGE value="implemented ChangeProgramCommand and ChangeMenuCommand" />
     <MESSAGE value="implemented ViewProgramCommand" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented ViewProgramCommand" />
+    <MESSAGE value="implemented RelationalExpression and added a test program" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented RelationalExpression and added a test program" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
