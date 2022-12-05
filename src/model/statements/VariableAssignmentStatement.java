@@ -28,10 +28,10 @@ public class VariableAssignmentStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IDictionary<Integer, IValue> heapTable = state.getHeapTable();
 
         if(symTable.get(id) != null) {
-            IValue value = expr.evaluate(symTable, heap);
+            IValue value = expr.evaluate(symTable, heapTable);
             IType type = (symTable.get(id)).getType();
 
             if (value.getType().equals(type)) {

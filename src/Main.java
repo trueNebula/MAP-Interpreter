@@ -13,7 +13,7 @@ import controller.Controller;
 import repository.Repository;
 
 public class Main {
-    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapRWTest;
+    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapRWTest, whileTest;
     public static ProgramRepository programRepo;
     public static void main(String[] args) {
         // initialize Program Repo and create programs
@@ -45,12 +45,16 @@ public class Main {
         Controller cont6 = new Controller(repo6);
         programRepo.addProgram(cont6);
 
+        Repository repo7 = new Repository(whileTest, "log7.txt");
+        Controller cont7 = new Controller(repo7);
+        programRepo.addProgram(cont7);
+
         // create Main menu and Program menu and start
         TextMenu menu = new TextMenu("BogoScript Interpreter");
         TextMenu programMenu = new TextMenu("Select a Program:");
         menu.addCommand(new ChangeMenuCommand("1", "Change Program", programMenu));
-        menu.addCommand(new ViewProgramCommand("2", "View Program", cont6));
-        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont6));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", cont7));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont7));
         menu.addCommand(new ExitCommand("4", "Exit."));
 
         programMenu.addCommand(new ChangeMenuCommand("0", "Back", menu));
@@ -162,6 +166,26 @@ public class Main {
 
                         )
 
+                );
+
+        whileTest =
+                new CompoundStatement(
+                        new VariableDeclarationStatement("i", new IntType()),
+                        new CompoundStatement(
+                                new VariableAssignmentStatement("i", new ValueExpression(new IntValue(4))),
+                                new CompoundStatement(
+                                        new WhileStatement(
+                                                new RelationalExpression(new VariableExpression("i"), ">", new ValueExpression(new IntValue(0))), new CompoundStatement(
+                                                        new PrintStatement(new VariableExpression("i")),
+                                                        new VariableAssignmentStatement("i", new ArithmeticExpression(new VariableExpression("i"), '-', new ValueExpression(new IntValue(1))))
+
+                                                )
+                                        ),
+                                        new PrintStatement(new VariableExpression("i"))
+
+                                )
+
+                        )
                 );
 
     }

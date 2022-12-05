@@ -73,7 +73,7 @@ public class ArithmeticExpression implements IExpression{
 
     @Override
     public String toString() {
-        return exp1.toString() + " " + operator + "" + exp2;
+        return exp1.toString() + " " + operator + " " + exp2;
     }
 
 }
