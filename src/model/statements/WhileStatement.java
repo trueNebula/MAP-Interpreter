@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.collections.stack.IStack;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
@@ -29,7 +30,7 @@ public class WhileStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IStack<IStatement> exeStack = state.getExecutionStack();
         IDictionary<String, IValue> symTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heapTable = state.getHeapTable();
+        IHeap heapTable = state.getHeapTable();
 
         IValue expressionEvaluationResult = expression.evaluate(symTable, heapTable);
 

@@ -1,6 +1,7 @@
 package model.expressions;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.types.ReferenceType;
 import model.values.IValue;
@@ -19,7 +20,7 @@ public class HeapReadExpression implements IExpression{
 
     }
 
-    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) throws ExpressionEvaluationException {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IHeap heap) throws ExpressionEvaluationException {
         IValue expressionEvaluationResult = expression.evaluate(tbl, heap);
 
         if(expressionEvaluationResult.getType() instanceof ReferenceType){

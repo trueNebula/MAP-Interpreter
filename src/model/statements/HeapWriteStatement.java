@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
 import model.expressions.IExpression;
@@ -31,7 +32,7 @@ public class HeapWriteStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symbolTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heapTable = state.getHeapTable();
+        IHeap heapTable = state.getHeapTable();
 
         // check if variable declared
         if(symbolTable.get(variableName) != null){

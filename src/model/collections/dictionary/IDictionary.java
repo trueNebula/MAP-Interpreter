@@ -8,6 +8,6 @@ public interface IDictionary<T, K> {
     boolean isEmpty();
     void remove(T key);
     int size();
-    void setElems(HashMap<T, K> newContent);
     HashMap<T, K> getElems();
+
 }

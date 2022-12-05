@@ -1,6 +1,7 @@
 package model.expressions;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.values.IValue;
 
 @SuppressWarnings("unused")
@@ -13,7 +14,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IHeap heap) {
         return tbl.get(id);
 
     }

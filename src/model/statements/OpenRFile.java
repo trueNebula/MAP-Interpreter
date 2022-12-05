@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
 import model.expressions.IExpression;
@@ -34,8 +35,8 @@ public class OpenRFile implements IStatement{
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IDictionary<StringValue, BufferedReader> fTable = state.getFileTable();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
-        IValue evalResult = expr.evaluate(symTable, heap);
+        IHeap heapTable = state.getHeapTable();
+        IValue evalResult = expr.evaluate(symTable, heapTable);
 
         if(!Objects.equals(evalResult.getType(), new StringType()))
             throw new StatementExecutionException("Expression is not of String Type!");

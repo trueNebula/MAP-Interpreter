@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.collections.stack.IStack;
 import model.exceptions.ExpressionEvaluationException;
 import model.expressions.IExpression;
@@ -29,9 +30,9 @@ public class IfStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws ExpressionEvaluationException {
         IStack<IStatement> exeStack = state.getExecutionStack();
         IDictionary<String, IValue> symTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IHeap heapTable = state.getHeapTable();
 
-        IValue exprEvalResult = expr.evaluate(symTable, heap);
+        IValue exprEvalResult = expr.evaluate(symTable, heapTable);
         boolean exprEvalResultBool;
 
         if(exprEvalResult.getType().toString().equals("bool"))

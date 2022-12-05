@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
 import model.expressions.IExpression;
@@ -28,7 +29,7 @@ public class VariableAssignmentStatement implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heapTable = state.getHeapTable();
+        IHeap heapTable = state.getHeapTable();
 
         if(symTable.get(id) != null) {
             IValue value = expr.evaluate(symTable, heapTable);

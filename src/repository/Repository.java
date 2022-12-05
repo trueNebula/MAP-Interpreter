@@ -1,6 +1,8 @@
 package repository;
 import model.collections.dictionary.GenericDictionary;
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.GenericHeap;
+import model.collections.heap.IHeap;
 import model.collections.list.GenericList;
 import model.collections.list.IList;
 import model.collections.stack.GenericStack;
@@ -27,7 +29,7 @@ public class Repository {
         IDictionary<String, IValue> symTable = new GenericDictionary<>();
         IList<IValue> out = new GenericList<>();
         IDictionary<StringValue, BufferedReader> fTable = new GenericDictionary<>();
-        IDictionary<Integer, IValue> heap = new GenericDictionary<>();
+        IHeap heap = new GenericHeap();
 
         originalProgram = program;
         logFilePath = logPath;

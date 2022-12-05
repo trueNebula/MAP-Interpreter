@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.collections.list.IList;
 import model.exceptions.ExpressionEvaluationException;
 import model.expressions.IExpression;
@@ -25,9 +26,9 @@ public class PrintStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
         IList<IValue> out = state.getOutputStream();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IHeap heapTable = state.getHeapTable();
 
-        out.add(expr.evaluate(symTable, heap));
+        out.add(expr.evaluate(symTable, heapTable));
 
         return state;
 

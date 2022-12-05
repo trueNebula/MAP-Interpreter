@@ -4,15 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="while statement">
-      <change afterPath="$PROJECT_DIR$/log8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/structures/GarbageCollector.java" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="safe garbage collector">
+      <change afterPath="$PROJECT_DIR$/src/model/collections/heap/GenericHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/collections/heap/IHeap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/HeapReadExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/HeapReadExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/IExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/IExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +99,7 @@
       <workItem from="1670150836812" duration="4281000" />
       <workItem from="1670171360171" duration="9016000" />
       <workItem from="1670226260656" duration="4742000" />
-      <workItem from="1670233650510" duration="4465000" />
+      <workItem from="1670233650510" duration="6023000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -295,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670232053135</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="safe garbage collector">
+      <created>1670238181933</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1670238181933</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +364,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed a bunch of warnings" />
     <MESSAGE value="Added IfStatement and a test program" />
     <MESSAGE value="Added output to runAllSteps" />
     <MESSAGE value="Added output to runOneStep" />
@@ -366,7 +388,8 @@
     <MESSAGE value="heap allocation" />
     <MESSAGE value="heap reading, writing, allocation" />
     <MESSAGE value="while statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="while statement" />
+    <MESSAGE value="safe garbage collector" />
+    <option name="LAST_COMMIT_MESSAGE" value="safe garbage collector" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

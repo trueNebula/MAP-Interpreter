@@ -1,6 +1,7 @@
 package model.expressions;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.types.IntType;
 import model.values.IValue;
@@ -24,7 +25,7 @@ public class ArithmeticExpression implements IExpression{
     }
 
     @Override
-    public IValue evaluate(IDictionary<String, IValue> tbl, IDictionary<Integer, IValue> heap) throws ExpressionEvaluationException {
+    public IValue evaluate(IDictionary<String, IValue> tbl, IHeap heap) throws ExpressionEvaluationException {
         IValue v1, v2;
         v1 = exp1.evaluate(tbl, heap);
 

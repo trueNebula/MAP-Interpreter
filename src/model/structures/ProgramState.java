@@ -1,5 +1,6 @@
 package model.structures;
 import model.collections.dictionary.*;
+import model.collections.heap.IHeap;
 import model.collections.list.*;
 import model.collections.stack.*;
 import model.statements.IStatement;
@@ -13,10 +14,10 @@ public class ProgramState {
     IDictionary<String, IValue> symbolTable;
     IList<IValue> outputStream;
     IDictionary<StringValue, BufferedReader> fileTable;
-    IDictionary<Integer, IValue> heapTable;
+    IHeap heapTable;
     IStatement originalProgram;
 
-    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IDictionary<Integer, IValue> heap, IStatement original){
+    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IHeap heap, IStatement original){
         executionStack = exeStack;
         symbolTable = symTable;
         outputStream = out;
@@ -65,7 +66,7 @@ public class ProgramState {
     }
 
     @SuppressWarnings("unused")
-    public IDictionary<Integer, IValue> getHeapTable(){
+    public IHeap getHeapTable(){
         return heapTable;
 
     }
@@ -104,7 +105,7 @@ public class ProgramState {
     }
 
     @SuppressWarnings("unused")
-    public void setHeapTable(IDictionary<Integer, IValue> heap){
+    public void setHeapTable(IHeap heap){
         heapTable = heap;
 
     }

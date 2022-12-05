@@ -1,6 +1,7 @@
 package model.statements;
 
 import model.collections.dictionary.IDictionary;
+import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
 import model.expressions.IExpression;
@@ -32,7 +33,7 @@ public class CloseRFile implements IStatement{
     @Override
     public ProgramState execute(ProgramState state) throws StatementExecutionException, ExpressionEvaluationException {
         IDictionary<String, IValue> symTable = state.getSymbolTable();
-        IDictionary<Integer, IValue> heap = state.getHeapTable();
+        IHeap heap = state.getHeapTable();
         IDictionary<StringValue, BufferedReader> fTable = state.getFileTable();
         IValue evalResult = expr.evaluate(symTable, heap);
 
