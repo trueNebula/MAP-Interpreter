@@ -6,6 +6,7 @@ import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.LoggingException;
 import model.exceptions.StatementExecutionException;
 import model.statements.IStatement;
+import model.structures.GarbageCollector;
 import model.structures.ProgramState;
 import model.values.IValue;
 import repository.Repository;
@@ -41,6 +42,9 @@ public class Controller {
 
         while(!progState.getExecutionStack().isEmpty()){
             runOneStep(progState, false);
+            repository.logProgramState();
+
+            progState.getHeapTable().setElems(GarbageCollector.collect(GarbageCollector.getAddressesFromSymbolTable(progState.getSymbolTable().getElems().values()), progState.getHeapTable().getElems()));
             repository.logProgramState();
 
             if(!progState.getOutputStream().isEmpty())

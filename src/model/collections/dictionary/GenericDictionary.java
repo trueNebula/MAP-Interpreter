@@ -55,4 +55,17 @@ public class GenericDictionary<T, K> implements IDictionary<T, K> {
 
     }
 
+    @Override
+    public void setElems(HashMap<T, K> newContent){
+        elems = newContent;
+
+    }
+
+    // fix
+    @Override
+    public HashMap<T, K> getElems(){
+        return elems;
+
+    }
+
 }

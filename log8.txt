@@ -1,0 +1,685 @@
+---------------
+LOG START
+
+ExeStack:
+int* p; 
+new(p, 20);
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+new(p, 30);
+print(readHeap(readHeap(v))); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int* p; 
+new(p, 20);
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int* p; 
+new(p, 20);
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int* p; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int* p; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 20);
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 0, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 20);
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 0, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 20);
+
+Symbol Table:
+p --> 0, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 20);
+
+Symbol Table:
+p --> 0, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int** v; 
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int** v; 
+
+Symbol Table:
+p --> 1, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+int** v; 
+
+Symbol Table:
+p --> 1, int
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 0, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(v, p);
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 0, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(v, p);
+
+Symbol Table:
+p --> 1, int
+v --> 0, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(v, p);
+
+Symbol Table:
+p --> 1, int
+v --> 0, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(p); 
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(p); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(p); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+1, int
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(v); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+1, int
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 30);
+print(readHeap(readHeap(v))); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+2, int*
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 30);
+print(readHeap(readHeap(v))); 
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+2, int*
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 30);
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+new(p, 30);
+
+Symbol Table:
+p --> 1, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(readHeap(readHeap(v))); 
+
+Symbol Table:
+p --> 3, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+3 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+print(readHeap(readHeap(v))); 
+
+Symbol Table:
+p --> 3, int
+v --> 2, int*
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+3 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+p --> 3, int
+v --> 2, int*
+
+Output Stream:
+20
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+3 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ExeStack:
+
+Symbol Table:
+p --> 3, int
+v --> 2, int*
+
+Output Stream:
+20
+
+File Table:
+
+Heap Table:
+1 --> 20
+2 --> 1, int
+3 --> 30
+
+LOG END
+---------------
+
+
