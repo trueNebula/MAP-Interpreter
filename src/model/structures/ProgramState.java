@@ -3,6 +3,9 @@ import model.collections.dictionary.*;
 import model.collections.heap.IHeap;
 import model.collections.list.*;
 import model.collections.stack.*;
+import model.exceptions.CollectionException;
+import model.exceptions.ExpressionEvaluationException;
+import model.exceptions.StatementExecutionException;
 import model.statements.IStatement;
 import model.values.IValue;
 import model.values.StringValue;
@@ -16,6 +19,7 @@ public class ProgramState {
     IDictionary<StringValue, BufferedReader> fileTable;
     IHeap heapTable;
     IStatement originalProgram;
+    int id;
 
     public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IHeap heap, IStatement original){
         executionStack = exeStack;
@@ -31,7 +35,8 @@ public class ProgramState {
 
     @Override
     public String toString(){
-        return "ExeStack: \n" + executionStack.toString() + "\n-------------\n\nSymbol Table: \n"
+        return "ID: " + id + "\n"
+                + "ExeStack: \n" + executionStack.toString() + "\n-------------\n\nSymbol Table: \n"
                 + symbolTable.toString() + "\n-------------\n\nOutput Stream: \n"
                 + outputStream.toString() + "\n-------------\n\nFile Table: \n"
                 + fileTable.toString() + "\n-------------\n\nHeap Table: \n"
@@ -39,8 +44,34 @@ public class ProgramState {
 
     }
 
+    public ProgramState runOneStep(boolean display) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
+        if(executionStack.isEmpty())
+            throw new StatementExecutionException("ExecutionStack is empty");
+
+        IStatement currentStatement = executionStack.pop();
+        currentStatement.execute(this);
+
+        if(display)
+            System.out.println(this);
+
+        return this;
+
+    }
+
+
+    public boolean isNotCompleted(){
+        return !executionStack.isEmpty();
+
+    }
+
 
     // Getters
+
+    @SuppressWarnings("unused")
+    public int getID(){
+        return id;
+
+    }
 
     @SuppressWarnings("unused")
     public IStack<IStatement> getExecutionStack(){
@@ -79,6 +110,12 @@ public class ProgramState {
 
 
     // Setters
+
+    @SuppressWarnings("unused")
+    public void setID(int id){
+        this.id = id;
+
+    }
 
     @SuppressWarnings("unused")
     public void setExecutionStack(IStack<IStatement> exeStack){

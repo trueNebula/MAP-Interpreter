@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="cleanup">
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="repository prep for threads">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewProgramCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ViewProgramCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +84,7 @@
       <workItem from="1670233650510" duration="6188000" />
       <workItem from="1670711567912" duration="42000" />
       <workItem from="1670711617338" duration="235000" />
-      <workItem from="1671358957078" duration="1940000" />
+      <workItem from="1671358957078" duration="2408000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -321,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671359667316</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="repository prep for threads">
+      <created>1671371245523</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1671371245523</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +377,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added output to runOneStep" />
     <MESSAGE value="Added current program cmd in view" />
     <MESSAGE value="Added the worst possible program switching tech" />
     <MESSAGE value="Revamped view printing + added toString() overrides to collections" />
@@ -392,7 +401,8 @@
     <MESSAGE value="safe garbage collector" />
     <MESSAGE value="moved the heap to its own class" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="repository prep for threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="repository prep for threads" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

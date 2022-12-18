@@ -17,7 +17,7 @@ public class ViewProgramCommand extends Command{
 
     @Override
     public void execute() {
-        IStack<IStatement> exeStack = controller.getRepository().getCurrentProgramState().getExecutionStack();
+        IStack<IStatement> exeStack = controller.getRepository().getProgramStateList().get(0).getExecutionStack();
 
         if (!exeStack.isEmpty()) {
             printExeStackInorder(exeStack.peek());

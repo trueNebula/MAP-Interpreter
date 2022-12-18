@@ -56,6 +56,9 @@ public class Repository {
             logFile.println("---------------");
             logFile.println("LOG START\n");
 
+            // print Program State ID
+            logFile.println("ID: " + state.getID() + "\n");
+
             // print the Execution Stack text and its contents inorder
             logFile.println("ExeStack:");
             logFile.close();

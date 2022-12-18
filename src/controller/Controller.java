@@ -19,22 +19,6 @@ public class Controller {
 
     }
 
-    @SuppressWarnings("UnusedReturnValue")
-    public ProgramState runOneStep(ProgramState state, boolean display) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
-        IStack<IStatement> exeStack = state.getExecutionStack();
-
-        if(exeStack.isEmpty())
-            throw new StatementExecutionException("ExecutionStack is empty");
-
-        IStatement currentStatement = exeStack.pop();
-        currentStatement.execute(state);
-
-        if(display)
-            printProgramState(state);
-
-        return state;
-
-    }
 
     public void runAllSteps() throws StatementExecutionException, ExpressionEvaluationException, CollectionException, LoggingException {
         ProgramState progState = repository.getCurrentProgramState();
@@ -78,9 +62,6 @@ public class Controller {
 
     }
 
-    public void printProgramState(ProgramState state){
-        System.out.println(state);
 
-    }
 
 }
