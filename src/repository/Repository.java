@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Repository {
-    List<ProgramState> repo = new ArrayList<>();
+    List<ProgramState> programStateList = new ArrayList<>();
     public IStatement originalProgram;
     String logFilePath;
 
@@ -34,17 +34,21 @@ public class Repository {
         originalProgram = program;
         logFilePath = logPath;
 
-        repo.add(new ProgramState(exeStack, symTable, out, fTable, heap, program));
+        programStateList.add(new ProgramState(exeStack, symTable, out, fTable, heap, program));
 
     }
 
-    public ProgramState getCurrentProgramState(){
-        return repo.get(0);
+    public List<ProgramState> getProgramStateList(){
+        return programStateList;
 
     }
 
+    public void setProgramStateList(List<ProgramState> programStateList){
+        this.programStateList = programStateList;
 
-    public void logProgramState() throws LoggingException{
+    }
+
+    public void logProgramState(ProgramState state) throws LoggingException{
         try {
             PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
 
@@ -55,7 +59,7 @@ public class Repository {
             // print the Execution Stack text and its contents inorder
             logFile.println("ExeStack:");
             logFile.close();
-            logExeStackInorderWrapper();
+            logExeStackInorderWrapper(state);
 
             // open the writer again and clean up
             logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
@@ -63,19 +67,19 @@ public class Repository {
 
             // print the other structures
             logFile.println("Symbol Table:");
-            logFile.print(repo.get(0).getSymbolTable());
+            logFile.print(state.getSymbolTable());
             logFile.println();
 
             logFile.println("Output Stream:");
-            logFile.print(repo.get(0).getOutputStream());
+            logFile.print(state.getOutputStream());
             logFile.println();
 
             logFile.println("File Table:");
-            logFile.print(repo.get(0).getFileTable());
+            logFile.print(state.getFileTable());
             logFile.println();
 
             logFile.println("Heap Table:");
-            logFile.print(repo.get(0).getHeapTable());
+            logFile.print(state.getHeapTable());
             logFile.println();
 
             // finish up
@@ -94,8 +98,8 @@ public class Repository {
 
     }
 
-    public void logExeStackInorderWrapper() throws LoggingException {
-        IStack<IStatement> exeStack = repo.get(0).getExecutionStack();
+    public void logExeStackInorderWrapper(ProgramState state) throws LoggingException {
+        IStack<IStatement> exeStack = state.getExecutionStack();
 
         if (!exeStack.isEmpty())
             logExeStackInorder(exeStack.peek());
