@@ -3,7 +3,6 @@ import model.collections.dictionary.*;
 import model.collections.heap.IHeap;
 import model.collections.list.*;
 import model.collections.stack.*;
-import model.exceptions.CollectionException;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
 import model.statements.IStatement;
@@ -20,6 +19,7 @@ public class ProgramState {
     IHeap heapTable;
     IStatement originalProgram;
     int id;
+    static int latestID;
 
     public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IHeap heap, IStatement original){
         executionStack = exeStack;
@@ -30,6 +30,15 @@ public class ProgramState {
         originalProgram = original;
 
         exeStack.push(originalProgram);
+
+    }
+
+    public ProgramState(IStack<IStatement> exeStack, IDictionary<String, IValue> symTable, IList<IValue> out, IDictionary<StringValue, BufferedReader> fTable, IHeap heap){
+        executionStack = exeStack;
+        symbolTable = symTable;
+        outputStream = out;
+        fileTable = fTable;
+        heapTable = heap;
 
     }
 
@@ -44,17 +53,12 @@ public class ProgramState {
 
     }
 
-    public ProgramState runOneStep(boolean display) throws StatementExecutionException, ExpressionEvaluationException, CollectionException {
+    public ProgramState runOneStep() throws StatementExecutionException, ExpressionEvaluationException {
         if(executionStack.isEmpty())
             throw new StatementExecutionException("ExecutionStack is empty");
 
         IStatement currentStatement = executionStack.pop();
-        currentStatement.execute(this);
-
-        if(display)
-            System.out.println(this);
-
-        return this;
+        return currentStatement.execute(this);
 
     }
 
@@ -112,8 +116,15 @@ public class ProgramState {
     // Setters
 
     @SuppressWarnings("unused")
-    public void setID(int id){
-        this.id = id;
+    public static void initID(){
+        latestID = -1;
+
+    }
+
+    @SuppressWarnings("unused")
+    public void setID(){
+        latestID++;
+        this.id = latestID;
 
     }
 

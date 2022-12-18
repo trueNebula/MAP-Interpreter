@@ -35,6 +35,8 @@ public class Repository {
         logFilePath = logPath;
 
         programStateList.add(new ProgramState(exeStack, symTable, out, fTable, heap, program));
+        ProgramState.initID();
+        programStateList.get(0).setID();
 
     }
 

@@ -30,7 +30,10 @@ public class ForkStatement implements IStatement{
 
         childExeStack.push(statement);
 
-        return new ProgramState(childExeStack, childSymTable, state.getOutputStream(), state.getFileTable(), state.getHeapTable(), state.getOriginalProgram());
+        ProgramState childThread = new ProgramState(childExeStack, childSymTable, state.getOutputStream(), state.getFileTable(), state.getHeapTable());
+        childThread.setID();
+
+        return childThread;
 
     }
 

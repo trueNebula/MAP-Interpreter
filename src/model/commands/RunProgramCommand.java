@@ -37,6 +37,10 @@ public class RunProgramCommand extends Command{
             System.out.println("Caught LoggingException");
             System.out.println(LE.getMessage() + "\n");
 
+        } catch (InterruptedException IE){
+            System.out.println("Caught InterruptedException");
+            System.out.println(IE.getMessage() + "\n");
+
         }
 
     }

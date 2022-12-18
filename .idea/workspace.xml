@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="added ForkStatement">
-      <change afterPath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/NoStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/NoStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/BoolValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/IValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/IntValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IntValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/values/StringValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/StringValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/commands/RunProgramCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/RunProgramCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/structures/GarbageCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/GarbageCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/MAP-Interpreter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/GitHub/MAP-Interpreter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Run boy run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -102,7 +93,8 @@
       <workItem from="1670711617338" duration="235000" />
       <workItem from="1671358957078" duration="2467000" />
       <workItem from="1671371732347" duration="1350000" />
-      <workItem from="1671373104873" duration="764000" />
+      <workItem from="1671373104873" duration="1408000" />
+      <workItem from="1671374535662" duration="8179000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -356,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671371676184</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added ForkStatement">
+      <created>1671374003913</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1671374003913</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,6 +427,23 @@
     <MESSAGE value="programstate prep for threads" />
     <MESSAGE value="added ForkStatement" />
     <option name="LAST_COMMIT_MESSAGE" value="added ForkStatement" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((ProgramState)this.arg$1).symbolTable" custom="model.structures.ProgramState,java.util.concurrent.Callable" />
+        <watch expression="newProgramStateList" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
