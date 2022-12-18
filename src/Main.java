@@ -3,17 +3,14 @@ import model.expressions.*;
 import model.statements.*;
 import model.types.IntType;
 import model.types.ReferenceType;
-import model.types.StringType;
-import model.values.BoolValue;
 import model.values.IntValue;
-import model.values.StringValue;
 import repository.ProgramRepository;
 import view.TextMenu;
 import controller.Controller;
 import repository.Repository;
 
 public class Main {
-    public static IStatement bigBoy, printTest, ifTest, rFileTest, relTest, heapTest, heapRWTest, whileTest, garbTest;
+    public static IStatement heapTest, garbTest;
     public static ProgramRepository programRepo;
     public static void main(String[] args) {
         // initialize Program Repo and create programs
@@ -21,44 +18,18 @@ public class Main {
         createPrograms();
 
         // initialize structures for each program and add them to the Program Repo
-        Repository repo1 = new Repository(bigBoy, "log1.txt");
+        Repository repo1 = new Repository(garbTest, "log1.txt");
         Controller cont1 = new Controller(repo1);
         programRepo.addProgram(cont1);
 
-        Repository repo2 = new Repository(printTest, "log2.txt");
-        Controller cont2 = new Controller(repo2);
-        programRepo.addProgram(cont2);
 
-        Repository repo3 = new Repository(ifTest, "log3.txt");
-        Controller cont3 = new Controller(repo3);
-        programRepo.addProgram(cont3);
-
-        Repository repo4 = new Repository(rFileTest, "log4.txt");
-        Controller cont4 = new Controller(repo4);
-        programRepo.addProgram(cont4);
-
-        Repository repo5 = new Repository(relTest, "log5.txt");
-        Controller cont5 = new Controller(repo5);
-        programRepo.addProgram(cont5);
-
-        Repository repo6 = new Repository(heapRWTest, "log6.txt");
-        Controller cont6 = new Controller(repo6);
-        programRepo.addProgram(cont6);
-
-        Repository repo7 = new Repository(whileTest, "log7.txt");
-        Controller cont7 = new Controller(repo7);
-        programRepo.addProgram(cont7);
-
-        Repository repo8 = new Repository(garbTest, "log8.txt");
-        Controller cont8 = new Controller(repo8);
-        programRepo.addProgram(cont8);
 
         // create Main menu and Program menu and start
         TextMenu menu = new TextMenu("BogoScript Interpreter");
         TextMenu programMenu = new TextMenu("Select a Program:");
         menu.addCommand(new ChangeMenuCommand("1", "Change Program", programMenu));
-        menu.addCommand(new ViewProgramCommand("2", "View Program", cont8));
-        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont8));
+        menu.addCommand(new ViewProgramCommand("2", "View Program", cont1));
+        menu.addCommand(new RunProgramCommand("3", "Run Selected Program", cont1));
         menu.addCommand(new ExitCommand("4", "Exit."));
 
         programMenu.addCommand(new ChangeMenuCommand("0", "Back", menu));
@@ -76,66 +47,6 @@ public class Main {
     }
 
     public static void createPrograms(){
-        bigBoy = new CompoundStatement(
-                new VariableDeclarationStatement("v", new IntType()), new CompoundStatement(
-                new VariableAssignmentStatement("v",
-                        new ValueExpression(
-                                new IntValue(2))),
-                new PrintStatement(new VariableExpression("v"))
-        ));
-
-        ifTest =
-                new IfStatement(
-                        new ValueExpression(new IntValue(0)),
-                        new PrintStatement(new ValueExpression(new BoolValue(true))),
-                        new PrintStatement(new ValueExpression(new BoolValue(false)))
-                );
-
-        printTest =
-                new CompoundStatement(
-                        new PrintStatement(new ValueExpression(new IntValue(1))),
-                        new PrintStatement(new ValueExpression(new IntValue(2)))
-                );
-
-        rFileTest =
-                new CompoundStatement(
-                        new VariableDeclarationStatement("file", new StringType()),
-                        new CompoundStatement(
-                                new VariableAssignmentStatement("file",
-                                        new ValueExpression(
-                                                new StringValue("test.in"))),
-                                new CompoundStatement(
-                                        new OpenRFile(new VariableExpression("file")),
-                                        new CompoundStatement(
-                                                new VariableDeclarationStatement("var", new IntType()),
-                                                new CompoundStatement(
-                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
-                                                        new CompoundStatement(
-                                                                new PrintStatement(new VariableExpression("var")),
-                                                                new CompoundStatement(
-                                                                        new ReadFile(new VariableExpression("file"), new StringValue("var")),
-                                                                        new CompoundStatement(
-                                                                                new PrintStatement(new VariableExpression("var")),
-                                                                                new CloseRFile(new VariableExpression("file"))
-                                                                        )
-                                                                )
-
-                                                        )
-
-                                                )
-
-                                        )
-                                )
-                        )
-                );
-
-        relTest =
-                new IfStatement(
-                        new RelationalExpression(new ValueExpression(new IntValue(3)), ">", new ValueExpression(new IntValue(5))),
-                        new PrintStatement(new ValueExpression(new BoolValue(true))),
-                        new PrintStatement(new ValueExpression(new BoolValue(false)))
-                );
-
         heapTest =
                 new CompoundStatement(
                         new VariableDeclarationStatement("p", new ReferenceType(new IntType())),
@@ -151,45 +62,6 @@ public class Main {
                                                 )
 
                                         )
-                                )
-
-                        )
-                );
-
-        heapRWTest =
-                new CompoundStatement(
-                        heapTest,
-                        new CompoundStatement(
-                                new PrintStatement(new HeapReadExpression(new VariableExpression("p"))),
-                                new CompoundStatement(
-                                        new HeapWriteStatement("p", new ValueExpression(new IntValue(30))),
-                                        new CompoundStatement(
-                                                new PrintStatement(new ArithmeticExpression(new HeapReadExpression(new VariableExpression("p")), '+', new ValueExpression(new IntValue(5)))),
-                                                new PrintStatement(new HeapReadExpression(new HeapReadExpression(new VariableExpression("v"))))
-
-                                        )
-
-                                )
-
-                        )
-
-                );
-
-        whileTest =
-                new CompoundStatement(
-                        new VariableDeclarationStatement("i", new IntType()),
-                        new CompoundStatement(
-                                new VariableAssignmentStatement("i", new ValueExpression(new IntValue(4))),
-                                new CompoundStatement(
-                                        new WhileStatement(
-                                                new RelationalExpression(new VariableExpression("i"), ">", new ValueExpression(new IntValue(0))), new CompoundStatement(
-                                                        new PrintStatement(new VariableExpression("i")),
-                                                        new VariableAssignmentStatement("i", new ArithmeticExpression(new VariableExpression("i"), '-', new ValueExpression(new IntValue(1))))
-
-                                                )
-                                        ),
-                                        new PrintStatement(new VariableExpression("i"))
-
                                 )
 
                         )
