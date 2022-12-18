@@ -12,6 +12,7 @@ import model.values.ReferenceValue;
 
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class HeapWriteStatement implements IStatement{
     String variableName;
     IExpression expression;
@@ -78,7 +79,7 @@ public class HeapWriteStatement implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

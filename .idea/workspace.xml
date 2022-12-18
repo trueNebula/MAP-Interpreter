@@ -4,12 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="repository prep for threads">
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="added ForkStatement">
+      <change afterPath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/commands/ViewProgramCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ViewProgramCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/structures/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/structures/ProgramState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/GenericDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/collections/dictionary/IDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/NoStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/NoStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/BoolValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/BoolValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/IValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/IntValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/IntValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/ReferenceValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/values/StringValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/values/StringValue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +100,9 @@
       <workItem from="1670233650510" duration="6188000" />
       <workItem from="1670711567912" duration="42000" />
       <workItem from="1670711617338" duration="235000" />
-      <workItem from="1671358957078" duration="2408000" />
+      <workItem from="1671358957078" duration="2467000" />
+      <workItem from="1671371732347" duration="1350000" />
+      <workItem from="1671373104873" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -331,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671371245523</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="programstate prep for threads">
+      <created>1671371676184</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1671371676184</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,8 +402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added current program cmd in view" />
-    <MESSAGE value="Added the worst possible program switching tech" />
     <MESSAGE value="Revamped view printing + added toString() overrides to collections" />
     <MESSAGE value="lowercase package names" />
     <MESSAGE value="added StringType, StringValue, fileTable" />
@@ -402,7 +425,9 @@
     <MESSAGE value="moved the heap to its own class" />
     <MESSAGE value="cleanup" />
     <MESSAGE value="repository prep for threads" />
-    <option name="LAST_COMMIT_MESSAGE" value="repository prep for threads" />
+    <MESSAGE value="programstate prep for threads" />
+    <MESSAGE value="added ForkStatement" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ForkStatement" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

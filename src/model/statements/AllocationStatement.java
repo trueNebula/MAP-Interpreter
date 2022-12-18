@@ -69,7 +69,7 @@ public class AllocationStatement implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

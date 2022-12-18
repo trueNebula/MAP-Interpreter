@@ -41,4 +41,10 @@ public class StringValue implements IValue{
 
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+
+    }
+
 }

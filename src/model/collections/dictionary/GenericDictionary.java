@@ -2,7 +2,7 @@ package model.collections.dictionary;
 
 import java.util.HashMap;
 
-public class GenericDictionary<T, K> implements IDictionary<T, K> {
+public class GenericDictionary<T, K> implements IDictionary<T, K>, Cloneable{
     HashMap<T, K> elems;
 
     public GenericDictionary(){
@@ -60,5 +60,32 @@ public class GenericDictionary<T, K> implements IDictionary<T, K> {
         return elems;
 
     }
+
+    public void setElems(HashMap<T, K> newElems){
+        elems = newElems;
+
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public IDictionary<T, K> clone(){
+        final IDictionary<T, K> clonedDictionary;
+        try {
+
+            clonedDictionary = (GenericDictionary<T, K>) super.clone();
+
+        }
+
+        catch(CloneNotSupportedException e){
+            throw new RuntimeException(e);
+
+        }
+
+        clonedDictionary.setElems((HashMap<T, K>) elems.clone());
+
+        return clonedDictionary;
+
+    }
+
 
 }

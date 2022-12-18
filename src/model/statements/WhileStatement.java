@@ -11,6 +11,7 @@ import model.types.BoolType;
 import model.values.BoolValue;
 import model.values.IValue;
 
+@SuppressWarnings("unused")
 public class WhileStatement implements IStatement{
     IExpression expression;
     IStatement statement;
@@ -56,7 +57,7 @@ public class WhileStatement implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

@@ -10,6 +10,7 @@ import model.types.IType;
 import model.values.IValue;
 
 
+@SuppressWarnings("unused")
 public class VariableAssignmentStatement implements IStatement{
     String id;
     IExpression expr;
@@ -51,7 +52,7 @@ public class VariableAssignmentStatement implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class ReadFile implements IStatement{
     IExpression expr;
     StringValue varName;
@@ -71,7 +72,7 @@ public class ReadFile implements IStatement{
 
         }
 
-        return state;
+        return null;
 
 
     }

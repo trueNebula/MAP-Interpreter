@@ -14,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class CloseRFile implements IStatement{
     IExpression expr;
 
@@ -56,7 +57,7 @@ public class CloseRFile implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

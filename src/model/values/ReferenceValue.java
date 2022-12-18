@@ -36,4 +36,10 @@ public class ReferenceValue implements IValue{
 
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+
+    }
+
 }

@@ -50,7 +50,7 @@ public class IfStatement implements IStatement{
             // expr = false, move to ELSE branch
             exeStack.push(elseStatement);
 
-        return state;
+        return null;
 
     }
 

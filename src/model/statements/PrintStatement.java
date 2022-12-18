@@ -30,7 +30,7 @@ public class PrintStatement implements IStatement{
 
         out.add(expr.evaluate(symTable, heapTable));
 
-        return state;
+        return null;
 
     }
 

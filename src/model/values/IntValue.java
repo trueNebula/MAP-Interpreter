@@ -39,4 +39,10 @@ public class IntValue implements IValue{
 
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException{
+        return super.clone();
+
+    }
+
 }

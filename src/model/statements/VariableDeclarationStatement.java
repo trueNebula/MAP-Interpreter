@@ -36,7 +36,7 @@ public class VariableDeclarationStatement implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 

@@ -15,6 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class OpenRFile implements IStatement{
     IExpression expr;
 
@@ -55,7 +56,7 @@ public class OpenRFile implements IStatement{
 
         }
 
-        return state;
+        return null;
 
     }
 
