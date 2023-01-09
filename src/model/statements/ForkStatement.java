@@ -5,7 +5,9 @@ import model.collections.stack.GenericStack;
 import model.collections.stack.IStack;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.structures.ProgramState;
+import model.types.IType;
 import model.values.IValue;
 
 @SuppressWarnings("unused")
@@ -34,6 +36,14 @@ public class ForkStatement implements IStatement{
         childThread.setID();
 
         return childThread;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        statement.typeCheck(typeEnv.clone());
+
+        return typeEnv;
 
     }
 

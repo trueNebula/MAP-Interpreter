@@ -4,8 +4,10 @@ import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.expressions.IExpression;
 import model.structures.ProgramState;
+import model.types.IType;
 import model.types.ReferenceType;
 import model.values.IValue;
 import model.values.ReferenceValue;
@@ -70,6 +72,18 @@ public class AllocationStatement implements IStatement{
         }
 
         return null;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType varType = typeEnv.get(variableName);
+        IType expType = expression.typeCheck(typeEnv);
+
+        if(!varType.equals(new ReferenceType(expType)))
+            throw new TypeCheckException("new statement left hand side and right hand side of different types!");
+
+        return typeEnv;
 
     }
 

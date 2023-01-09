@@ -5,9 +5,11 @@ import model.collections.heap.IHeap;
 import model.collections.stack.IStack;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.expressions.IExpression;
 import model.structures.ProgramState;
 import model.types.BoolType;
+import model.types.IType;
 import model.values.BoolValue;
 import model.values.IValue;
 
@@ -58,6 +60,19 @@ public class WhileStatement implements IStatement{
         }
 
         return null;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType expType = expression.typeCheck(typeEnv);
+
+        if(!expType.equals(new BoolType()))
+            throw new TypeCheckException("While condition does not evaluate to boolean type!");
+
+        statement.typeCheck(typeEnv.clone());
+
+        return typeEnv;
 
     }
 

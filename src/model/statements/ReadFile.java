@@ -4,8 +4,10 @@ import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.expressions.IExpression;
 import model.structures.ProgramState;
+import model.types.IType;
 import model.types.IntType;
 import model.values.IValue;
 import model.values.IntValue;
@@ -74,6 +76,18 @@ public class ReadFile implements IStatement{
 
         return null;
 
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType varType = typeEnv.get(varName.getValue());
+        IType expType = expr.typeCheck(typeEnv);
+
+        if(!varType.equals(expType))
+            throw new TypeCheckException("readFile statement left hand side and right hand side of different types!");
+
+        return typeEnv;
 
     }
 

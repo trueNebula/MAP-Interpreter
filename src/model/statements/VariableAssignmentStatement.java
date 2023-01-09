@@ -4,6 +4,7 @@ import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.expressions.IExpression;
 import model.structures.ProgramState;
 import model.types.IType;
@@ -40,7 +41,7 @@ public class VariableAssignmentStatement implements IStatement{
                 symTable.put(id, value);
 
             } else {
-                throw new StatementExecutionException("Declared type of variable " + id + " and type of assigned expression do not match");
+                throw new StatementExecutionException("Declared type of variable " + id + " and type of assigned expression do not !");
 
             }
 
@@ -48,11 +49,23 @@ public class VariableAssignmentStatement implements IStatement{
         }
 
         else{
-            throw new StatementExecutionException("The used variable " + id + " was not assigned before");
+            throw new StatementExecutionException("The used variable " + id + " was not assigned before!");
 
         }
 
         return null;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType varType = typeEnv.get(id);
+        IType expType = expr.typeCheck(typeEnv);
+
+        if (!varType.equals(expType))
+            throw new TypeCheckException("Declared type of variable \" + id + \" and type of assigned expression do not match");
+
+        return typeEnv;
 
     }
 

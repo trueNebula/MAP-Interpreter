@@ -4,8 +4,10 @@ import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.expressions.IExpression;
 import model.structures.ProgramState;
+import model.types.IType;
 import model.types.StringType;
 import model.values.IValue;
 import model.values.StringValue;
@@ -58,6 +60,14 @@ public class CloseRFile implements IStatement{
         }
 
         return null;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType expType = expr.typeCheck(typeEnv);
+
+        return typeEnv;
 
     }
 

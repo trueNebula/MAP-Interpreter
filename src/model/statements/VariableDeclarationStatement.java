@@ -2,6 +2,7 @@ package model.statements;
 
 import model.collections.dictionary.IDictionary;
 import model.exceptions.StatementExecutionException;
+import model.exceptions.TypeCheckException;
 import model.structures.ProgramState;
 import model.types.IType;
 import model.values.IValue;
@@ -37,6 +38,13 @@ public class VariableDeclarationStatement implements IStatement{
         }
 
         return null;
+
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        typeEnv.put(variableName, variableType);
+        return typeEnv;
 
     }
 

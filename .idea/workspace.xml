@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="controller and concurrency">
-      <change afterPath="$PROJECT_DIR$/src/model/exceptions/TypeCheckException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4d1eff8d-20f2-42ad-99f9-9577efdbd658" name="Changes" comment="added type checking for expressions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/commands/RunProgramCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/RunProgramCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ArithmeticExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/HeapReadExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/HeapReadExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/IExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/IExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/LogicalExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/RelationalExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/ValueExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/expressions/VariableExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/statements/IStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/AllocationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CloseRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ForkStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/HeapWriteStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/NoStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/NoStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/OpenRFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableAssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +101,7 @@
       <workItem from="1671373104873" duration="1408000" />
       <workItem from="1671374535662" duration="8301000" />
       <workItem from="1673170906375" duration="603000" />
-      <workItem from="1673245018106" duration="2740000" />
+      <workItem from="1673245018106" duration="5299000" />
     </task>
     <task id="LOCAL-00001" summary="A2 init">
       <created>1667808453004</created>
@@ -364,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671383608429</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added type checking for expressions">
+      <created>1673249305720</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1673249305720</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +422,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="lowercase package names" />
     <MESSAGE value="added StringType, StringValue, fileTable" />
     <MESSAGE value="added display flag to Controller.runOneStep()" />
     <MESSAGE value="added IType.defaultValue" />
@@ -435,7 +446,8 @@
     <MESSAGE value="programstate prep for threads" />
     <MESSAGE value="added ForkStatement" />
     <MESSAGE value="controller and concurrency" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller and concurrency" />
+    <MESSAGE value="added type checking for expressions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added type checking for expressions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

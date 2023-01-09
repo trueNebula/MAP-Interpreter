@@ -1,7 +1,10 @@
 package model.commands;
 
 import controller.Controller;
+import model.collections.dictionary.GenericDictionary;
+import model.collections.dictionary.IDictionary;
 import model.exceptions.*;
+import model.types.IType;
 
 public class RunProgramCommand extends Command{
     @SuppressWarnings("FieldMayBeFinal")
@@ -15,6 +18,18 @@ public class RunProgramCommand extends Command{
 
     @Override
     public void execute() {
+        IDictionary<String, IType> typeEnv = new GenericDictionary<>();
+
+        try {
+            controller.getRepository().originalProgram.typeCheck(typeEnv);
+
+        } catch (TypeCheckException TYE){
+            System.out.println("Caught TypeCheckException");
+            System.out.println(TYE.getMessage() + "\n");
+            return;
+
+        }
+
         try{
             controller.runAllSteps();
 
@@ -26,11 +41,7 @@ public class RunProgramCommand extends Command{
             System.out.println("Caught ExpressionEvaluationException:");
             System.out.println(EEE.getMessage() + "\n");
 
-        } /*catch (TypeCheckException TYE) {
-        System.out.println("Caught ExpressionEvaluationException:");
-        System.out.println(TYE.getMessage() + "\n");
-
-        }*/ catch (CollectionException CE) {
+        }  catch (CollectionException CE) {
             System.out.println("Caught CollectionException");
             System.out.println(CE.getMessage() + "\n");
 
