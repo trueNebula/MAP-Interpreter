@@ -2,6 +2,7 @@ package model.expressions;
 
 import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
+import model.types.IType;
 import model.values.IValue;
 
 @SuppressWarnings("unused")
@@ -14,13 +15,21 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
+    public String toString() {
+        return id;
+
+    }
+
+    @Override
     public IValue evaluate(IDictionary<String, IValue> tbl, IHeap heap) {
         return tbl.get(id);
 
     }
 
     @Override
-    public String toString() {
-        return id;
+    public IType typeCheck(IDictionary<String, IType> typeEnv){
+        return typeEnv.get(id);
+
     }
+
 }

@@ -1,10 +1,7 @@
 package model.commands;
 
 import controller.Controller;
-import model.exceptions.CollectionException;
-import model.exceptions.ExpressionEvaluationException;
-import model.exceptions.LoggingException;
-import model.exceptions.StatementExecutionException;
+import model.exceptions.*;
 
 public class RunProgramCommand extends Command{
     @SuppressWarnings("FieldMayBeFinal")
@@ -29,7 +26,11 @@ public class RunProgramCommand extends Command{
             System.out.println("Caught ExpressionEvaluationException:");
             System.out.println(EEE.getMessage() + "\n");
 
-        } catch (CollectionException CE) {
+        } /*catch (TypeCheckException TYE) {
+        System.out.println("Caught ExpressionEvaluationException:");
+        System.out.println(TYE.getMessage() + "\n");
+
+        }*/ catch (CollectionException CE) {
             System.out.println("Caught CollectionException");
             System.out.println(CE.getMessage() + "\n");
 

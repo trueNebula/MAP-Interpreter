@@ -3,6 +3,8 @@ package model.expressions;
 import model.collections.dictionary.IDictionary;
 import model.collections.heap.IHeap;
 import model.exceptions.ExpressionEvaluationException;
+import model.exceptions.TypeCheckException;
+import model.types.IType;
 import model.types.ReferenceType;
 import model.values.IValue;
 import model.values.ReferenceValue;
@@ -40,6 +42,17 @@ public class HeapReadExpression implements IExpression{
             throw new ExpressionEvaluationException("Value provided in readHeap call is not a reference!");
 
         }
+
+    }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnv) throws TypeCheckException {
+        IType type = expression.typeCheck(typeEnv);
+
+        if(!(type instanceof ReferenceType refType))
+            throw new TypeCheckException("readHeap argument not of ReferenceType!");
+
+        return refType.getInner();
 
     }
 
