@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIProgramController">
+   <children>
+      <HBox prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefWidth="150.0">
+               <children>
+                  <SplitPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <VBox>
+                           <children>
+                              <Text fx:id="programStateIDText" strokeType="OUTSIDE" strokeWidth="0.0" text="Program State ID" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <ListView fx:id="programStateIDList" prefHeight="380.0" prefWidth="140.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="150.0">
+               <children>
+                  <SplitPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <VBox layoutX="15.0" layoutY="15.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Execution Stack" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <ListView fx:id="executionStackList" prefHeight="380.0" prefWidth="140.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </ListView>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="150.0">
+               <children>
+                  <SplitPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <VBox layoutX="170.0" layoutY="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Symbol Table" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TableView fx:id="symbolTableList" prefHeight="380.0">
+                                <columns>
+                                  <TableColumn fx:id="symbolTableColumn1" editable="false" prefWidth="69.0" text="Variable" />
+                                  <TableColumn fx:id="symbolTableColumn2" editable="false" prefWidth="69.0" text="Value" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="150.0">
+               <children>
+                  <SplitPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <VBox layoutX="320.0" layoutY="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heap" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TableView fx:id="heapTableList" prefHeight="207.0" prefWidth="138.0">
+                                <columns>
+                                  <TableColumn fx:id="heapTableColumn1" editable="false" prefWidth="68.0" text="Address" />
+                                  <TableColumn fx:id="heapTableColumn2" editable="false" prefWidth="69.0" text="Value" />
+                                </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                              <HBox prefHeight="140.0" prefWidth="140.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="Lucida Sans Regular" size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <ListView fx:id="outputSteamList" prefHeight="200.0" prefWidth="200.0">
+                                             <VBox.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </ListView>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FileTable">
+                                             <font>
+                                                <Font name="Lucida Sans Regular" size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <ListView fx:id="fileTableList" prefHeight="200.0" prefWidth="200.0">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </ListView>
+                                          <Button fx:id="runButton" mnemonicParsing="false" onAction="#runButtonClick" prefHeight="25.0" prefWidth="63.0" text="Run" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Text layoutX="164.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I like men" wrappingWidth="122.40966796875">
+         <font>
+            <Font name="Comic Sans MS" size="48.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -31,6 +31,58 @@ ID: 0
 
 ExeStack:
 int v; 
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
+print(v); 
+print(readHeap(a)); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 0
+
+ExeStack:
+int v; 
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
+print(v); 
+print(readHeap(a)); 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 0
+
+ExeStack:
+int v; 
 
 Symbol Table:
 
@@ -477,12 +529,13 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+int v; 
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
 
@@ -502,7 +555,7 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
+int v; 
 
 Symbol Table:
 
@@ -522,14 +575,15 @@ LOG START
 ID: 0
 
 ExeStack:
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 0, int
+v --> 0
 
 Output Stream:
 
@@ -547,10 +601,10 @@ LOG START
 ID: 0
 
 ExeStack:
-new(p, 20);
+int* a; 
 
 Symbol Table:
-p --> 0, int
+v --> 0
 
 Output Stream:
 
@@ -568,20 +622,21 @@ LOG START
 ID: 0
 
 ExeStack:
-int** v; 
-new(v, p);
-print(p); 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
+a --> 0, int
+v --> 0
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -593,17 +648,17 @@ LOG START
 ID: 0
 
 ExeStack:
-int** v; 
+v = 10
 
 Symbol Table:
-p --> 1, int
+a --> 0, int
+v --> 0
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -615,20 +670,20 @@ LOG START
 ID: 0
 
 ExeStack:
-new(v, p);
-print(p); 
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 0, int*
+a --> 0, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -640,18 +695,17 @@ LOG START
 ID: 0
 
 ExeStack:
-new(v, p);
+new(a, 22);
 
 Symbol Table:
-p --> 1, int
-v --> 0, int*
+a --> 0, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -663,20 +717,20 @@ LOG START
 ID: 0
 
 ExeStack:
-print(p); 
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -688,19 +742,18 @@ LOG START
 ID: 0
 
 ExeStack:
-print(p); 
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -713,18 +766,18 @@ ID: 0
 
 ExeStack:
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -733,233 +786,24 @@ LOG END
 ---------------
 LOG START
 
-ID: 0
+ID: 1
 
 ExeStack:
-int* p; 
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+writeHeap(a, 30);
+v = 32
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-int* p; 
-
-Symbol Table:
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 0, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(p, 20);
-
-Symbol Table:
-p --> 0, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-int** v; 
-new(v, p);
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-int** v; 
-
-Symbol Table:
-p --> 1, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(v, p);
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-v --> 0, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(v, p);
-
-Symbol Table:
-p --> 1, int
-v --> 0, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-v --> 2, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-2 --> 1, int
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-print(p); 
-
-Symbol Table:
-p --> 1, int
-v --> 2, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -974,16 +818,38 @@ ExeStack:
 print(v); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+writeHeap(a, 30);
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 22
 
 LOG END
 ---------------
@@ -995,20 +861,43 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+v = 32
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
+1 --> 30
 
 LOG END
 ---------------
@@ -1017,18 +906,21 @@ LOG END
 ---------------
 LOG START
 
-ID: 0
+ID: 1
 
 ExeStack:
-int* p; 
+v = 32
 
 Symbol Table:
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
+1 --> 30
 
 LOG END
 ---------------
@@ -1037,23 +929,22 @@ LOG END
 ---------------
 LOG START
 
-ID: 0
+ID: 1
 
 ExeStack:
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 0, int
+a --> 1, int
+v --> 32
 
 Output Stream:
 
 File Table:
 
 Heap Table:
+1 --> 30
 
 LOG END
 ---------------
@@ -1062,187 +953,44 @@ LOG END
 ---------------
 LOG START
 
-ID: 0
-
-ExeStack:
-new(p, 20);
-
-Symbol Table:
-p --> 0, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-int** v; 
-new(v, p);
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-int** v; 
-
-Symbol Table:
-p --> 1, int
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(v, p);
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-v --> 0, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-new(v, p);
-
-Symbol Table:
-p --> 1, int
-v --> 0, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-print(p); 
-print(v); 
-
-Symbol Table:
-p --> 1, int
-v --> 2, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-2 --> 1, int
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
-
-ExeStack:
-print(p); 
-
-Symbol Table:
-p --> 1, int
-v --> 2, int*
-
-Output Stream:
-
-File Table:
-
-Heap Table:
-1 --> 20
-2 --> 1, int
-
-LOG END
----------------
-
-
----------------
-LOG START
-
-ID: 0
+ID: 1
 
 ExeStack:
 print(v); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 32
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 32
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 30
 
 LOG END
 ---------------
@@ -1254,12 +1002,13 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+int v; 
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
 
@@ -1279,14 +1028,35 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+int v; 
+
+Symbol Table:
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 0
+
+ExeStack:
+int* a; 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
+v --> 0
 
 Output Stream:
 
@@ -1304,9 +1074,10 @@ LOG START
 ID: 0
 
 ExeStack:
-int* p; 
+int* a; 
 
 Symbol Table:
+v --> 0
 
 Output Stream:
 
@@ -1324,14 +1095,15 @@ LOG START
 ID: 0
 
 ExeStack:
-new(p, 20);
-int** v; 
-new(v, p);
-print(p); 
+v = 10
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 0, int
+a --> 0, int
+v --> 0
 
 Output Stream:
 
@@ -1349,10 +1121,11 @@ LOG START
 ID: 0
 
 ExeStack:
-new(p, 20);
+v = 10
 
 Symbol Table:
-p --> 0, int
+a --> 0, int
+v --> 0
 
 Output Stream:
 
@@ -1370,20 +1143,20 @@ LOG START
 ID: 0
 
 ExeStack:
-int** v; 
-new(v, p);
-print(p); 
+new(a, 22);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
+a --> 0, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -1395,17 +1168,17 @@ LOG START
 ID: 0
 
 ExeStack:
-int** v; 
+new(a, 22);
 
 Symbol Table:
-p --> 1, int
+a --> 0, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
 
 LOG END
 ---------------
@@ -1417,20 +1190,20 @@ LOG START
 ID: 0
 
 ExeStack:
-new(v, p);
-print(p); 
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 0, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
+1 --> 22
 
 LOG END
 ---------------
@@ -1442,18 +1215,18 @@ LOG START
 ID: 0
 
 ExeStack:
-new(v, p);
+fork((writeHeap(a, 30); (v = 32 (print(v);  print(readHeap(a)); )))); 
 
 Symbol Table:
-p --> 1, int
-v --> 0, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
+1 --> 22
 
 LOG END
 ---------------
@@ -1465,20 +1238,19 @@ LOG START
 ID: 0
 
 ExeStack:
-print(p); 
 print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -1487,22 +1259,24 @@ LOG END
 ---------------
 LOG START
 
-ID: 0
+ID: 1
 
 ExeStack:
-print(p); 
+writeHeap(a, 30);
+v = 32
+print(v); 
+print(readHeap(a)); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
 
 LOG END
 ---------------
@@ -1517,17 +1291,190 @@ ExeStack:
 print(v); 
 
 Symbol Table:
-p --> 1, int
-v --> 2, int*
+a --> 1, int
+v --> 10
 
 Output Stream:
-1, int
 
 File Table:
 
 Heap Table:
-1 --> 20
-2 --> 1, int
+1 --> 22
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+writeHeap(a, 30);
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+
+File Table:
+
+Heap Table:
+1 --> 22
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 0
+
+ExeStack:
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+10
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+v = 32
+print(v); 
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+10
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+v = 32
+
+Symbol Table:
+a --> 1, int
+v --> 10
+
+Output Stream:
+10
+30
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+print(v); 
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 32
+
+Output Stream:
+10
+30
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+print(v); 
+
+Symbol Table:
+a --> 1, int
+v --> 32
+
+Output Stream:
+10
+30
+
+File Table:
+
+Heap Table:
+1 --> 30
+
+LOG END
+---------------
+
+
+---------------
+LOG START
+
+ID: 1
+
+ExeStack:
+print(readHeap(a)); 
+
+Symbol Table:
+a --> 1, int
+v --> 32
+
+Output Stream:
+10
+30
+32
+
+File Table:
+
+Heap Table:
+1 --> 30
 
 LOG END
 ---------------

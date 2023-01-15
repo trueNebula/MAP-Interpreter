@@ -1,4 +1,8 @@
 package model.collections.stack;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
 
 public class GenericStack<T> implements IStack<T>{
@@ -30,6 +34,14 @@ public class GenericStack<T> implements IStack<T>{
     @Override
     public T peek(){
         return elems.peek();
+
+    }
+
+    @Override
+    public List<T> getReversed() {
+        List<T> list = Arrays.asList((T[]) elems.toArray());
+        Collections.reverse(list);
+        return list;
 
     }
 

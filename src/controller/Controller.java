@@ -94,6 +94,15 @@ public class Controller {
 
     }
 
+    public void runOneStep() throws LoggingException, InterruptedException {
+        executor = Executors.newFixedThreadPool(2);
+        List<ProgramState> programStates = removeCompletedPrograms(repository.getProgramStateList());
+        runOneStepForAllThreads(programStates);
+        GarbageCollector.threadCollect(programStates);
+        executor.shutdownNow();
+
+    }
+
     @SuppressWarnings("unused")
     public List<ProgramState> getProgramStateList(){
         return repository.getProgramStateList();
@@ -119,6 +128,9 @@ public class Controller {
 
     }
 
+    public String toString(){
+        return repository.originalProgram.toString();
 
+    }
 
 }

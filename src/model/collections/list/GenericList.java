@@ -86,6 +86,12 @@ public class GenericList<T> implements IList<T>, Iterable<T>{
 
     }
 
+    @Override
+    public ArrayList<T> getElems(){
+        return elems;
+
+    }
+
 }
 
 class ListIterator<T> implements Iterator<T>{
